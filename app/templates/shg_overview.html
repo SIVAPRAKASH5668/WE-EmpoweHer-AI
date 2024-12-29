@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Help Groups Overview</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-pattern {
+            background-color: #1a365d;
+            background-image: radial-gradient(circle at center, #2a4365 0%, #1a365d 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="navbar shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="{{ url_for('static', filename='images/We Logo.png') }}" alt="WE Logo" class="h-10 w-10">
+
+                <span class="text-2xl font-semibold">WE-EmpowerHer AI</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-lg">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 py-12 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">
+                Self Help Groups Overview
+            </h1>
+            <p class="text-blue-100 text-xl mb-8">
+                Explore various Self Help Groups and their contributions to society.
+            </p>
+        </div>
+    </div>
+
+    <!-- SHGs Section -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for shg in shgs %}
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="{{ url_for('static', filename=shg.image_url) }}" 
+                        alt="{{ shg.alt_text }}" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">{{ shg.name }}</h3>
+                    <p class="text-gray-600 mt-2"><strong>Location:</strong> {{ shg.location }}</p>
+                    <p class="text-gray-600 mt-2"><strong>Established:</strong> {{ shg.established }}</p>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-gray-800">Focus:</h4>
+                        <p class="text-gray-600">{{ shg.focus }}</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-gray-800">Impact:</h4>
+                        <p class="text-gray-600">{{ shg.impact }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About</h3>
+                    <p class="text-gray-400">Official portal for information and updates on Self Help Groups.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Community Support</a></li>
+                        <li><a href="#" class="hover:text-white">Training Programs</a></li>
+                        <li><a href="#" class="hover:text-white">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white">Downloads</a></li>
+                        <li><a href="#" class="hover:text-white">Guidelines</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Self Help Group Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

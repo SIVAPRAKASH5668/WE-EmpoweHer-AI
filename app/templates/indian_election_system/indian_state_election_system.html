@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE - Indian State Elections Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-pattern {
+            background-color: #1a365d;
+            background-image: radial-gradient(circle at center, #2a4365 0%, #1a365d 100%);
+        }
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .state-card {
+            border-radius: 1rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .search-input {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 0.75rem center;
+            background-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar shadow-lg" style="
+    background: white;
+    padding: 1%;
+">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center" style="
+    background: aliceblue;
+">
+            <div class="flex items-center space-x-3">
+                <img src="/static/images/We%20Logo.png" alt="WE Logo" class="h-10 w-10">
+
+                <span class="text-2xl font-semibold">WE-EmpowerHer AI</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-lg">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 py-12 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">
+                Indian State Elections Dashboard
+            </h1>
+            <p class="text-blue-100 text-xl mb-8">
+                Comprehensive information about state elections across India
+            </p>
+            <div class="relative max-w-xl mx-auto">
+                <input type="text" 
+                       class="search-input w-full px-12 py-3 rounded-full border-2 border-blue-300 focus:outline-none focus:border-blue-500"
+                       placeholder="Search for states..."
+                       onkeyup="filterStates()">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-700">Total States</h3>
+                <p class="text-3xl font-bold text-blue-600">28</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-700">Union Territories</h3>
+                <p class="text-3xl font-bold text-blue-600">8</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-700">Active Elections</h3>
+                <p class="text-3xl font-bold text-blue-600">4</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-700">Upcoming Elections</h3>
+                <p class="text-3xl font-bold text-blue-600">3</p>
+            </div>
+        </div>
+
+        <!-- State Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="stateGrid">
+            <!-- Dynamically generated state cards -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About</h3>
+                    <p class="text-gray-400">Official portal for state election information and updates.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Election Schedule</a></li>
+                        <li><a href="#" class="hover:text-white">Voter Registration</a></li>
+                        <li><a href="#" class="hover:text-white">Results</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Downloads</a></li>
+                        <li><a href="#" class="hover:text-white">Guidelines</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Election Commission of India. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const states = [
+            {
+                name: "Andhra Pradesh",
+                status: "Upcoming",
+                seats: 175,
+                lastElection: "2019",
+                ruling: "YSR Congress"
+            },
+            {
+                name: "Maharashtra",
+                status: "Active",
+                seats: 288,
+                lastElection: "2019",
+                ruling: "Shiv Sena & BJP"
+            },
+            {
+                name: "Karnataka",
+                status: "Completed",
+                seats: 224,
+                lastElection: "2018",
+                ruling: "INC & JDS"
+            },
+            {
+                name: "Uttar Pradesh",
+                status: "Completed",
+                seats: 403,
+                lastElection: "2022",
+                ruling: "BJP"
+            },
+            {
+                name: "Bihar",
+                status: "Upcoming",
+                seats: 243,
+                lastElection: "2020",
+                ruling: "RJD, JD(U)"
+            },
+            {
+                name: "West Bengal",
+                status: "Completed",
+                seats: 294,
+                lastElection: "2021",
+                ruling: "TMC"
+            },
+            {
+                name: "Madhya Pradesh",
+                status: "Upcoming",
+                seats: 230,
+                lastElection: "2018",
+                ruling: "BJP"
+            },
+            {
+                name: "Rajasthan",
+                status: "Scheduled",
+                seats: 200,
+                lastElection: "2018",
+                ruling: "INC"
+            },
+            {
+                name: "Gujarat",
+                status: "Completed",
+                seats: 182,
+                lastElection: "2022",
+                ruling: "BJP"
+            },
+            {
+                name: "Odisha",
+                status: "Active",
+                seats: 147,
+                lastElection: "2019",
+                ruling: "BJD"
+            },
+            {
+                name: "Telangana",
+                status: "Completed",
+                seats: 119,
+                lastElection: "2018",
+                ruling: "TRS"
+            },
+            {
+                name: "Kerala",
+                status: "Completed",
+                seats: 140,
+                lastElection: "2021",
+                ruling: "LDF"
+            },
+            {
+                name: "Andaman and Nicobar Islands",
+                status: "Scheduled",
+                seats: 1,
+                lastElection: "2019",
+                ruling: "BJP"
+            },
+            {
+                name: "Arunachal Pradesh",
+                status: "Completed",
+                seats: 60,
+                lastElection: "2019",
+                ruling: "BJP"
+            },
+            {
+                name: "Assam",
+                status: "Completed",
+                seats: 126,
+                lastElection: "2021",
+                ruling: "BJP"
+            },
+            {
+                name: "Chhattisgarh",
+                status: "Scheduled",
+                seats: 90,
+                lastElection: "2018",
+                ruling: "INC"
+            },
+            {
+                name: "Goa",
+                status: "Completed",
+                seats: 40,
+                lastElection: "2022",
+                ruling: "BJP"
+            },
+            {
+                name: "Haryana",
+                status: "Upcoming",
+                seats: 90,
+                lastElection: "2019",
+                ruling: "BJP"
+            },
+            {
+                name: "Himachal Pradesh",
+                status: "Completed",
+                seats: 68,
+                lastElection: "2022",
+                ruling: "INC"
+            },
+            {
+                name: "Jammu and Kashmir",
+                status: "Scheduled",
+                seats: 87,
+                lastElection: "2014",
+                ruling: "President's Rule"
+            },
+            {
+                name: "Jharkhand",
+                status: "Completed",
+                seats: 81,
+                lastElection: "2019",
+                ruling: "JMM"
+            },
+            {
+                name: "Karnataka",
+                status: "Completed",
+                seats: 224,
+                lastElection: "2018",
+                ruling: "INC & JDS"
+            },
+            {
+                name: "Kerala",
+                status: "Completed",
+                seats: 140,
+                lastElection: "2021",
+                ruling: "LDF"
+            },
+            {
+                name: "Madhya Pradesh",
+                status: "Upcoming",
+                seats: 230,
+                lastElection: "2018",
+                ruling: "BJP"
+            },
+            {
+                name: "Mizoram",
+                status: "Upcoming",
+                seats: 40,
+                lastElection: "2018",
+                ruling: "MNF"
+            },
+            {
+                name: "Nagaland",
+                status: "Scheduled",
+                seats: 60,
+                lastElection: "2018",
+                ruling: "NDPP & BJP"
+            },
+            {
+                name: "Odisha",
+                status: "Active",
+                seats: 147,
+                lastElection: "2019",
+                ruling: "BJD"
+            },
+            {
+                name: "Punjab",
+                status: "Scheduled",
+                seats: 117,
+                lastElection: "2022",
+                ruling: "AAP"
+            },
+            {
+                name: "Sikkim",
+                status: "Completed",
+                seats: 32,
+                lastElection: "2019",
+                ruling: "SKM"
+            },
+            {
+                name: "Tamil Nadu",
+                status: "Scheduled",
+                seats: 234,
+                lastElection: "2021",
+                ruling: "DMK"
+            },
+            {
+                name: "Uttarakhand",
+                status: "Upcoming",
+                seats: 70,
+                lastElection: "2022",
+                ruling: "BJP"
+            },
+            {
+                name: "Uttar Pradesh",
+                status: "Completed",
+                seats: 403,
+                lastElection: "2022",
+                ruling: "BJP"
+            },
+            {
+                name: "West Bengal",
+                status: "Completed",
+                seats: 294,
+                lastElection: "2021",
+                ruling: "TMC"
+            },
+            {
+                name: "Delhi",
+                status: "Completed",
+                seats: 70,
+                lastElection: "2020",
+                ruling: "AAP"
+            },
+            {
+                name: "Puducherry",
+                status: "Completed",
+                seats: 30,
+                lastElection: "2021",
+                ruling: "Indian National Congress"
+            }
+        ];
+
+
+        function createStateCard(state) {
+            const statusColor = {
+                "Active": "bg-green-100 text-green-800",
+                "Upcoming": "bg-yellow-100 text-yellow-800",
+                "Completed": "bg-blue-100 text-blue-800",
+                "Scheduled": "bg-purple-100 text-purple-800"
+            };
+
+            return `
+                <div class="state-card p-6 transition-all hover:shadow-xl" onclick="redirectToState('indian_election_system/${state.name}')">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-xl font-bold text-gray-800">${state.name}</h2>
+                        <span class="px-3 py-1 rounded-full text-sm font-medium ${statusColor[state.status]}">
+                            ${state.status}
+                        </span>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-gray-600"><i class="fas fa-chair mr-2"></i>Seats: ${state.seats}</p>
+                        <p class="text-gray-600"><i class="fas fa-calendar mr-2"></i>Last Election: ${state.lastElection}</p>
+                        <p class="text-gray-600"><i class="fas fa-flag mr-2"></i>Ruling: ${state.ruling}</p>
+                    </div>
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        View Details
+                    </button>
+                </div>
+            `;
+        }
+
+        function initializeStates() {
+            const stateGrid = document.getElementById('stateGrid');
+            stateGrid.innerHTML = states.map(state => createStateCard(state)).join('');
+        }
+
+        function filterStates() {
+            const searchTerm = document.querySelector('.search-input').value.toLowerCase();
+            const filteredStates = states.filter(state => 
+                state.name.toLowerCase().includes(searchTerm)
+            );
+            
+            const stateGrid = document.getElementById('stateGrid');
+            stateGrid.innerHTML = filteredStates.map(state => createStateCard(state)).join('');
+        }
+
+        function redirectToState(stateName) {
+            window.location.href = `/state/${stateName.toLowerCase().replace(' ', '-')}`;
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', initializeStates);
+    </script>
+</body>
+</html>

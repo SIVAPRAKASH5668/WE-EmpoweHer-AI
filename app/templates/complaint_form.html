@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Service Complaint Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .hero-pattern {
+            background-color: #1a365d;
+            background-image: radial-gradient(circle at center, #ffffff 0%, #e9f2ff 100%);
+        }
+        .form-input {
+            @apply w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500;
+        }
+        .notification {
+            @apply p-4 rounded-lg mb-4 hidden;
+        }
+        .success {
+            @apply bg-green-100 text-green-700 border border-green-400;
+        }
+        .error {
+            @apply bg-red-100 text-red-700 border border-red-400;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-purple-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white rounded-full p-0"> <!-- Added white background and padding for rounded effect -->
+                        <img src="{{ url_for('static', filename='images/We Logo.png') }}" alt="Logo" class="h-10 w-10">
+                    </div>
+                    <div class="text-xl font-bold">WE-EmpowerHer AI </div>
+                </div>
+                <a href="/" class="hover:text-purple-200 transition duration-300">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-white rounded-lg shadow-lg px-4 py-12 p-6 mb-8 animate__animated animate__fadeIn text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-2">Government Service Complaint Portal</h1>
+        <p class="text-gray-600">File and track your complaints with relevant government departments</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Complaint Form Section -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Submit Your Complaint</h2>
+                <div id="notification" class="notification"></div>
+
+                <form id="complaintForm" class="space-y-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="name">
+                                <i class="fas fa-user mr-2"></i>Full Name
+                            </label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="email">
+                                <i class="fas fa-envelope mr-2"></i>Email Address
+                            </label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="department">
+                                <i class="fas fa-building mr-2"></i>Department
+                            </label>
+                            <select id="department" name="department" class="form-input" required>
+                                <option value="">Select Department</option>
+                                <option value="Electricity">Electricity Department</option>
+                                <option value="Water">Water Supply Department</option>
+                                <option value="Municipal">Municipal Corporation</option>
+                                <option value="Transport">Transport Department</option>
+                                <option value="Telecom">Telecommunications</option>
+                                <option value="Health">Public Health Department</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="subject">
+                                <i class="fas fa-heading mr-2"></i>Subject
+                            </label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="complaint">
+                                <i class="fas fa-comment mr-2"></i>Complaint Details
+                            </label>
+                            <textarea id="complaint" name="complaint" rows="6" class="form-input" required></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-paperclip mr-2"></i>Supporting Documents
+                            </label>
+                            <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg">
+                                <div class="space-y-1 text-center">
+                                    <i class="fas fa-cloud-upload-alt text-4xl text-gray-400"></i>
+                                    <div class="flex text-sm text-gray-600">
+                                        <label for="image" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500">
+                                            <span>Upload files</span>
+                                            <input id="image" name="image" type="file" class="sr-only" accept="image/*" multiple>
+                                        </label>
+                                        <p class="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">PNG, JPG up to 10MB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end">
+                        <button type="button" id="formatBtn" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-eye mr-2"></i>Preview Complaint
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Preview Section -->
+            <div id="formattedContent" class="hidden bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+                    <i class="fas fa-file-alt mr-2"></i>Preview Your Complaint
+                </h2>
+                <textarea id="formattedComplaint" class="form-input mb-6" readonly rows="15" style="
+    width: 100%;"></textarea>
+                <div class="flex justify-center space-x-4">
+                    <button type="button" id="editBtn" class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-edit mr-2"></i>Edit
+                    </button>
+                    <button type="button" id="confirmBtn" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                        <i class="fas fa-paper-plane mr-2"></i>Submit
+                    </button>
+                    <button type="button" id="downloadBtn" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-download mr-2"></i>Download PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About</h3>
+                    <p class="text-gray-400">Official portal for government service complaints and grievance redressal.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Track Complaint</a></li>
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">User Guide</a></li>
+                        <li><a href="#" class="hover:text-white">Department Directory</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+        let fileList = [];
+        let pdf_base64 = '';  // Define the pdf_base64 variable
+    
+        // Handle file selection
+        $('#image').on('change', function(e) {
+            fileList = Array.from(e.target.files);
+            updateFileList();
+        });
+    
+        function updateFileList() {
+            const fileNames = fileList.map(file => file.name).join(', ');
+            if (fileNames) {
+                $('.text-xs.text-gray-500').text(`Selected files: ${fileNames}`);
+            }
+        }
+    
+        // Format the complaint and generate the PDF
+        $('#formatBtn').click(function() {
+            const formData = new FormData();
+            formData.append('name', $('#name').val());
+            formData.append('email', $('#email').val());
+            formData.append('department', $('#department').val());
+            formData.append('subject', $('#subject').val());
+            formData.append('complaint', $('#complaint').val());
+    
+            fileList.forEach((file, index) => {
+                formData.append(`image${index}`, file);
+            });
+    
+            $.ajax({
+                url: '/format_complaint',
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    if (response.formatted_content && response.pdf_base64) {
+                        $('#formattedComplaint').val(response.formatted_content);
+                        $('#formattedContent').removeClass('hidden');
+                        pdf_base64 = response.pdf_base64;  // Store the generated PDF base64
+                        $('#downloadBtn').data('pdf', pdf_base64);
+                        showNotification('Preview generated successfully!', 'success');
+                    } else {
+                        showNotification('Error: Invalid response from server.', 'error');
+                    }
+                },
+                error: function(error) {
+                    console.error('Error generating preview:', error);
+                    showNotification('Error generating preview.', 'error');
+                }
+            });
+        });
+    
+        // Show notifications
+        function showNotification(message, type) {
+            const notification = $('#notification');
+            notification.removeClass('success error').addClass(type);
+            notification.text(message).fadeIn();
+            setTimeout(() => notification.fadeOut(), 5000);
+        }
+    
+        // Edit the formatted complaint
+        $('#editBtn').click(function() {
+            $('#formattedContent').addClass('hidden');
+        });
+    
+        // Handle the form submission and send pdf_base64 back to the server
+        $('#confirmBtn').click(function() {
+            const formData = new FormData();
+            formData.append('name', $('#name').val());
+            formData.append('email', $('#email').val());
+            formData.append('department', $('#department').val());
+            formData.append('subject', $('#subject').val());
+            formData.append('complaint', $('#complaint').val());
+            formData.append('formatted_content', $('#formattedComplaint').val());
+    
+            fileList.forEach((file, index) => {
+                formData.append(`image${index}`, file);
+            });
+    
+            // Ensure pdf_base64 is set before submission
+            if (!pdf_base64) {
+                console.error("PDF Base64 is missing.");
+                showNotification('Error: PDF not generated or missing.', 'error');
+                return;
+            }
+    
+            console.log("Submitting pdf_base64:", pdf_base64);  // Add a debug log to ensure pdf_base64 is set
+            formData.append('pdf_base64', pdf_base64);  // Add the PDF base64 to the form data
+    
+            $.ajax({
+                url: '/submit_complaint',
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    showNotification('Complaint submitted successfully!', 'success');
+                    // Optional: Reset form after successful submission
+                    $('#complaintForm')[0].reset();
+                    $('#formattedContent').addClass('hidden');
+                },
+                error: function(error) {
+                    console.error('Error submitting complaint:', error);
+                    showNotification('Error submitting complaint.', 'error');
+                }
+            });
+        });
+    
+        // Handle PDF download
+        $('#downloadBtn').click(function() {
+            const pdf_base64 = $(this).data('pdf');
+            if (!pdf_base64) {
+                console.error("PDF Base64 is missing for download.");
+                showNotification('Error: PDF not available for download.', 'error');
+                return;
+            }
+            const link = document.createElement('a');
+            link.href = 'data:application/pdf;base64,' + pdf_base64;
+            link.download = 'complaint.pdf';
+            link.click();
+        });
+    });
+    
+    
+        </script>
+</body>
+</html>

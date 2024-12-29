@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Schemes Eligibility Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB;
+            color: #333;
+        }
+
+        .hero-pattern {
+            background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+        }
+
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control, .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #1D4ED8;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #2563EB;
+        }
+
+        .scheme-card {
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: white;
+        }
+
+        .scheme-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1D4ED8;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-weight: 600;
+            color: #4B5563;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #1D4ED8;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (min-width: 768px) {
+            .layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="{{ url_for('static', filename='images/We Logo.png') }}" alt="WE Logo" class="h-10 w-10">
+
+                <span class="text-2xl font-semibold">WE-EmpowerHer AI</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-lg">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-pattern py-16 text-center">
+        <h1 class="text-5xl font-extrabold mb-4">Eligibility Checker</h1>
+        <p class="text-lg mb-6">Check your eligibility for various women welfare schemes by providing your details below.</p>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <div class="layout">
+            <div class="left">
+                <div class="card">
+                    <form id="eligibilityForm">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-lg font-medium mb-2">Age</label>
+                                <input type="number" class="form-control" id="age" name="age" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-lg font-medium mb-2">State of Residence</label>
+                                <input type="text" class="form-control" id="state" name="state" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-lg font-medium mb-2">Annual Household Income (INR)</label>
+                                <input type="number" class="form-control" id="annualIncome" name="annualIncome" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-lg font-medium mb-2">Marital Status</label>
+                                <select class="form-select" id="maritalStatus" name="maritalStatus" required>
+                                    <option value="">Select</option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="widowed">Widowed</option>
+                                    <option value="divorced">Divorced</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-lg font-medium mb-2">Highest Education Level</label>
+                                <input type="text" class="form-control" id="education" name="education" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-lg font-medium mb-2">Employment Status</label>
+                                <select class="form-select" id="occupation" name="occupation" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Employed</option>
+                                    <option value="no">Unemployed</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-primary mt-6">Check Eligibility</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right">
+                <div id="response" class="card"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">About</h3>
+                <p class="text-sm">A comprehensive tool to help women check their eligibility for various government welfare schemes and programs.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800">About Us</a></li>
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800">Contact</a></li>
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-xl text-blue-600 hover:text-blue-800"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-xl text-blue-600 hover:text-blue-800"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-xl text-blue-600 hover:text-blue-800"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-sm text-gray-600">© 2024 Women Schemes Eligibility Checker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    [Previous HTML content remains the same until the script tag]
+
+    <script>
+        document.getElementById('eligibilityForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+    
+            const formData = new FormData(e.target);
+            const userDetails = {
+                age: formData.get('age'),
+                state: formData.get('state'),
+                annual_income: formData.get('annualIncome'),
+                marital_status: formData.get('maritalStatus'),
+                education: formData.get('education'),
+                occupation: formData.get('occupation')
+            };
+    
+            const responseDiv = document.getElementById('response');
+            responseDiv.innerHTML = '<div class="loading-spinner"></div>';
+    
+            try {
+                const response = await fetch('/search_schemes', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userDetails)
+                });
+    
+                if (!response.ok) {
+                    throw new Error('Failed to fetch schemes');
+                }
+    
+                let data = await response.text();
+                
+                // Format the response
+                let formattedHtml = formatResponse(data);
+                
+                // Display the formatted response
+                responseDiv.innerHTML = formattedHtml;
+            } catch (error) {
+                responseDiv.innerHTML = `
+                    <div class="bg-red-50 border-l-4 border-red-500 p-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-red-700">
+                                    ${error.message}
+                                </p>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+        });
+
+        function formatResponse(text) {
+            // Split the text into sections based on scheme numbers
+            const schemes = text.split(/(?=\d+\.\s+)/);
+            
+            let html = '<div class="space-y-6">';
+            
+            schemes.forEach(scheme => {
+                if (!scheme.trim()) return; // Skip empty schemes
+                
+                // Split each scheme into title and content
+                const [title, ...content] = scheme.split('\n');
+                
+                if (!title) return; // Skip if no title
+                
+                html += `
+                    <div class="scheme-card">
+                        <h3 class="scheme-title">${title.trim()}</h3>
+                `;
+                
+                // Group content by sections
+                let currentSection = '';
+                let sectionContent = [];
+                
+                content.forEach(line => {
+                    line = line.trim();
+                    if (!line) return; // Skip empty lines
+                    
+                    // Check if this is a section header
+                    if (line.endsWith(':')) {
+                        // If we have a previous section, add it to HTML
+                        if (currentSection && sectionContent.length) {
+                            html += formatSection(currentSection, sectionContent);
+                        }
+                        // Start new section
+                        currentSection = line.slice(0, -1);
+                        sectionContent = [];
+                    } else if (line.startsWith('-')) {
+                        // This is a list item
+                        sectionContent.push(line.substring(1).trim());
+                    } else if (currentSection) {
+                        // This is content for the current section
+                        sectionContent.push(line);
+                    }
+                });
+                
+                // Add the last section
+                if (currentSection && sectionContent.length) {
+                    html += formatSection(currentSection, sectionContent);
+                }
+                
+                html += '</div>';
+            });
+            
+            html += '</div>';
+            return html;
+        }
+
+        function formatSection(title, items) {
+            if (!items.length) return '';
+            
+            return `
+                <div class="mt-4">
+                    <div class="section-title">${title}</div>
+                    <ul class="list-disc list-inside space-y-1">
+                        ${items.map(item => `
+                            <li class="text-gray-700 ml-4">${item}</li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

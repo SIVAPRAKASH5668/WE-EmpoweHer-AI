@@ -1,0 +1,429 @@
+{
+    "Sonia Gandhi": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Key figure in Indian politics",
+        "Former President of the Indian National Congress",
+        "Advocated for social justice and women’s rights",
+        "Led the Congress party through significant political events"
+      ],
+      "image_url": "image files/rajyasabha/001-Sonia_Gandhi.jpg",
+      "achievements": [
+        "Led Congress during the 2004 and 2009 general elections",
+        "Championed the enactment of the National Rural Employment Guarantee Act (NREGA)",
+        "Focused on women’s empowerment and social equality"
+      ]
+    },
+    "Indira Gandhi": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Former Prime Minister of India",
+        "Instrumental in women’s empowerment and economic reforms",
+        "Played a pivotal role in India’s national security and foreign policy",
+        "Advocated for social welfare schemes, and nationalization of banks"
+      ],
+      "image_url": "image files/rajyasabha/002-Indira_Gandhi.jpg",
+      "achievements": [
+        "First and only female Prime Minister of India",
+        "Led India through the 1971 war with Pakistan and the subsequent creation of Bangladesh",
+        "Introduced the Green Revolution to increase food production",
+        "Promoted policies of industrial growth and poverty reduction"
+      ]
+    },
+    "Meira Kumar": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "First woman Speaker of the Lok Sabha",
+        "Promoted gender equality and social justice",
+        "Focused on the efficient functioning of the Parliament",
+        "Advocated for women's participation in politics"
+      ],
+      "image_url": "image files/rajyasabha/003-Meira_Kumar.jpg",
+      "achievements": [
+        "Led the Lok Sabha in the 15th and 16th Parliament sessions",
+        "Played a key role in maintaining parliamentary decorum and upholding democratic values",
+        "Encouraged women’s political empowerment and gender-sensitive policies"
+      ]
+    },
+    "Shabana Azmi": {
+      "party": "Independent",
+      "contributions": [
+        "Prominent actress and social activist",
+        "Advocated for women’s rights and gender equality",
+        "Promoted secularism and social justice",
+        "Involved in numerous social causes including education and health"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Founder of the Mijwan Welfare Society, working towards women's empowerment",
+        "Won multiple National Film Awards and Padma Shri for her contribution to Indian cinema",
+        "Active in campaigns for education, health, and equality for women and marginalized groups"
+      ]
+    },
+    "Sushma Swaraj": {
+      "party": "Bharatiya Janata Party (BJP)",
+      "contributions": [
+        "Former External Affairs Minister of India",
+        "Known for her diplomatic leadership and global advocacy",
+        "Enhanced India's position on the world stage",
+        "Advocated for women's safety, social justice, and empowerment"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Pioneered the 'Twitter Diplomacy' and played a crucial role in evacuating Indians from conflict zones",
+        "Led India’s foreign policy during challenging times",
+        "Worked on initiatives for the welfare of Indian citizens abroad and diaspora communities"
+      ]
+    },
+    "Smriti Irani": {
+      "party": "Bharatiya Janata Party (BJP)",
+      "contributions": [
+        "Current Union Minister for Women and Child Development",
+        "Known for empowering women and promoting skill development programs",
+        "Advocated for women’s safety and welfare",
+        "Launched various initiatives to support women in the workforce"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Implemented the Beti Bachao Beti Padhao scheme to promote girls' education",
+        "Launched skill development programs for women to improve employability",
+        "Played a key role in the National Commission for Women"
+      ]
+    },
+    "Mayawati": {
+      "party": "Bahujan Samaj Party (BSP)",
+      "contributions": [
+        "Former Chief Minister of Uttar Pradesh",
+        "Known for her work in Dalit empowerment and social justice",
+        "Promoted affirmative action and worked towards social equality",
+        "Played a significant role in the political empowerment of the Dalit community"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Instrumental in implementing policies that aimed to uplift marginalized communities",
+        "Successfully led the BSP government in Uttar Pradesh multiple times",
+        "Promoted social welfare schemes for the backward classes, Dalits, and women"
+      ]
+    },
+    "Nirmala Sitharaman": {
+      "party": "Bharatiya Janata Party (BJP)",
+      "contributions": [
+        "India’s first female Defense Minister",
+        "Credited with significant reforms in defense and security",
+        "Played a key role in India’s economic reforms",
+        "Focused on national security, defense modernization, and the welfare of military personnel"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Successfully managed India’s defense strategy during critical times",
+        "Played a vital role in the implementation of economic reforms, including GST",
+        "Developed the 'Make in India' initiative for defense production"
+      ]
+    },
+    "Pratibha Patil": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Former President of India",
+        "Advocated for the rights of women and marginalized communities",
+        "Promoted rural development and healthcare during her tenure",
+        "Contributed to national policies on education and women’s welfare"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "First woman to hold the office of President of India",
+        "Focused on welfare schemes for women and children",
+        "Advocated for the marginalized and underprivileged sections of society"
+      ]
+    },
+    "Jaya Bachchan": {
+      "party": "Samajwadi Party",
+      "contributions": [
+        "Prominent actress and politician",
+        "Advocated for women’s rights and social issues",
+        "Known for her active role in the Rajya Sabha as a member",
+        "Played a significant role in social justice campaigns"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Championed women’s empowerment, especially in the entertainment industry",
+        "Instrumental in the passage of social justice and women-friendly laws",
+        "Active in raising awareness on issues such as child labor and domestic violence"
+      ]
+    },
+    "Rukmini Devi Arundale": {
+      "party": "Independent",
+      "contributions": [
+        "Prominent figure in Indian classical dance and education",
+        "Contributed to the cultural preservation and promotion of traditional art forms",
+        "Founded the Kalakshetra Academy to promote Bharatanatyam",
+        "Advocated for women's participation in the arts and education"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Revitalized classical dance and traditional arts in India",
+        "Played a key role in the Indian independence movement through cultural contributions",
+        "Helped preserve and promote the heritage of Indian classical arts globally"
+      ]
+    },
+    "Anusuiya Uikey": {
+      "party": "Bharatiya Janata Party (BJP)",
+      "contributions": [
+        "Governor of Chhattisgarh and former MP",
+        "Known for her contributions to women’s empowerment and educational reforms",
+        "Focused on tribal development and welfare of backward communities",
+        "Worked towards improving education and healthcare facilities in Chhattisgarh"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Played a pivotal role in promoting social justice and women’s empowerment",
+        "Led various initiatives to uplift tribal communities and improve education",
+        "Advocated for policies to improve healthcare access in remote areas"
+      ]
+    },
+    "Vijaya Raje Scindia": {
+      "party": "Bharatiya Janata Party (BJP)",
+      "contributions": [
+        "Prominent political leader and member of the BJP",
+        "Instrumental in the formation of the BJP",
+        "Played a significant role in promoting women’s rights",
+        "Advocated for social reforms in Madhya Pradesh"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Contributed to the consolidation of the BJP in Madhya Pradesh",
+        "Worked on policies that focused on women’s empowerment and welfare",
+        "Helped in shaping the ideological foundation of the BJP in its early years"
+      ]
+    },
+    "Ambika Soni": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Former Union Minister and key leader from Punjab",
+        "Advocated for the development of the region and women’s welfare",
+        "Worked on policies related to national integration and social justice",
+        "Promoted regional development, especially in Punjab"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Focused on infrastructure development and economic growth in Punjab",
+        "Led initiatives for women’s empowerment and education",
+        "Contributed significantly to the cultural and political development of Punjab"
+      ]
+    },
+    "Bimla Kashyap Sood": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Known for her work in social welfare and women’s empowerment",
+        "Focused on promoting women’s rights and social justice",
+        "Worked on improving conditions for women and marginalized groups in rural areas"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Implemented several social welfare programs for women and children",
+        "Advocated for the empowerment of women through education and skill development",
+        "Worked towards gender equality and health care accessibility for underprivileged sections"
+      ]
+    },
+    "Kumari Selja": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Former Minister of Social Justice and Empowerment",
+        "Focused on social justice, backward classes, and women’s empowerment",
+        "Implemented policies aimed at improving the condition of backward classes",
+        "Advocated for the welfare of women and marginalized communities"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Led the Ministry of Social Justice and Empowerment during her tenure",
+        "Worked on strengthening reservation policies for backward classes",
+        "Launched various initiatives for the empowerment of women in rural areas"
+      ]
+    },
+    "Savitri Bai Phule": {
+      "party": "Bahujan Samaj Party (BSP)",
+      "contributions": [
+        "Social reformer and activist",
+        "Pioneered efforts in education and social equality for Dalit women",
+        "Founder of the first girls' school in India, advocating for women's education",
+        "Fought against caste-based discrimination and worked towards the upliftment of women in society"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Established the first girls' school in Pune in 1848",
+        "Fought against the caste system and gender inequality",
+        "Promoted women's rights and education for Dalits and backward classes"
+      ]
+    },
+    "Ela Bhatt": {
+      "party": "Self-Employed Women's Association (SEWA)",
+      "contributions": [
+        "Pioneering leader in empowering women, especially in the informal sector",
+        "Founder of SEWA, focusing on economic justice for women",
+        "Advocated for workers' rights and social security for women in the unorganized sector"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Founded SEWA, an organization that has supported over 2 million women workers",
+        "Fought for economic and social justice for women in the informal sector",
+        "Played a crucial role in organizing women workers into a cohesive movement"
+      ]
+    },
+    "Kanimozhi": {
+      "party": "Dravida Munnetra Kazhagam (DMK)",
+      "contributions": [
+        "Known for her work in social justice and women's empowerment",
+        "Focused on the economic development of Tamil Nadu",
+        "Advocated for the rights of women, minorities, and the underprivileged"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Promoted women's welfare and education policies in Tamil Nadu",
+        "Contributed to social justice reforms through legislation",
+        "Played an active role in Tamil Nadu’s political and social development"
+      ]
+    },
+    "Kapila Vatsyayan": {
+      "party": "Independent",
+      "contributions": [
+        "Renowned cultural scholar and former Rajya Sabha member",
+        "Known for her work in preserving and promoting Indian arts and culture",
+        "Advocated for the empowerment of women through cultural education"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Contributed significantly to the promotion of classical Indian dance and arts",
+        "Focused on preserving India's cultural heritage through various platforms",
+        "Published several scholarly works on Indian classical arts"
+      ]
+    },
+    "Vijayalaxmi Sadho": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Advocated for rural development and women's empowerment",
+        "Promoted policies aimed at improving rural economies and women’s welfare",
+        "Fought for social justice reforms in rural areas"
+      ],
+      "achievements": [
+        "Worked extensively on rural development and empowerment of rural women",
+        "Promoted social welfare policies and schemes aimed at rural upliftment",
+        "Successfully lobbied for women-centric legislation in Parliament"
+      ]
+    },
+    "Shanta Vasisht": {
+      "party": "Bharatiya Janata Party (BJP)",
+      "contributions": [
+        "Known for her work in women's welfare and improving social conditions",
+        "Advocated for marginalized communities and women's rights",
+        "Played a role in promoting women's issues within the BJP"
+      ],
+      "achievements": [
+        "Pushed for policies that focused on women’s health and education",
+        "Focused on marginalized communities and social justice issues"
+      ]
+    },
+    "Sumitra Mahajan": {
+      "party": "Bharatiya Janata Party (BJP)",
+      "contributions": [
+        "Former Speaker of the Lok Sabha",
+        "Known for her contributions to parliamentary procedures and women’s empowerment",
+        "Played a crucial role in enhancing the efficiency and decorum of the Lok Sabha"
+      ],
+      "achievements": [
+        "Successfully served as Speaker of the Lok Sabha for two terms",
+        "Worked towards improving gender representation in politics",
+        "Advocated for policies that empower women and strengthen parliamentary functioning"
+      ]
+    },
+    "Vandana Chavan": {
+      "party": "Nationalist Congress Party (NCP)",
+      "contributions": [
+        "A prominent figure in the Rajya Sabha",
+        "Advocacy for women’s welfare and children’s rights",
+        "Worked on issues such as child nutrition, education, and women’s health"
+      ],
+      "achievements": [
+        "Promoted child welfare policies in the Rajya Sabha",
+        "Led discussions on gender equality and women's health policies",
+        "Played a pivotal role in raising awareness on the issues facing women and children"
+      ]
+    },
+    "T. Ratna Bai": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Advocated for women’s rights and social justice reforms",
+        "Contributed to policy-making to improve the status of women in India",
+        "Worked extensively on improving healthcare and education for women"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Led initiatives to promote women’s participation in governance",
+        "Worked on reforms to uplift marginalized women and children"
+      ]
+      
+    },
+    "Jayanthi Natarajan": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Environmentalist and former Union Minister",
+        "Known for her role in India’s environmental protection and policies",
+        "Focused on climate change, conservation, and sustainable development"
+      ],
+      "image_url": "image files/womenentreprenuer/001-Falguni-Nayar.jpg",
+      "achievements": [
+        "Played a significant role in India’s environmental policy-making",
+        "Advocated for international collaboration on climate change issues",
+        "Promoted sustainable development practices during her tenure as Minister"
+      ]
+    },
+    "Nargis": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Advocated for women’s empowerment, education, and healthcare reforms",
+        "Worked on the social welfare of women in rural India",
+        "Fought for the improvement of healthcare and education infrastructure"
+      ],
+      "achievements": [
+        "Worked on various rural development projects, especially for women’s health",
+        "Advocated for educational reforms and women’s access to education"
+      ]
+    },
+    "Anwara Taimur": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Prominent politician from Assam",
+        "Known for her contributions to the development of Assam and welfare of women and children",
+        "Focused on improving healthcare, education, and women’s rights in Assam"
+      ],
+      "achievements": [
+        "Led several initiatives for the upliftment of women in Assam",
+        "Played an important role in improving healthcare and education facilities for women and children in the state"
+      ]
+    },
+    "Amee Yajnik": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Social worker and politician",
+        "Focused on urban development and the welfare of marginalized communities",
+        "Worked on issues like housing, sanitation, and women’s empowerment"
+      ],
+      "achievements": [
+        "Advocated for affordable housing and improved sanitation in urban areas",
+        "Worked on promoting women’s empowerment in urban communities"
+      ]
+    },
+    "Vyjayanthimala": {
+      "party": "Indian National Congress (INC)",
+      "contributions": [
+        "Renowned actress and politician",
+        "Advocated for cultural preservation and women’s rights",
+        "Played a significant role in public life and in advocating for arts and culture"
+      ],
+      "achievements": [
+        "Promoted cultural education and preservation of traditional Indian arts",
+        "Championed women’s rights, especially in the entertainment industry",
+        "Worked towards raising awareness of issues facing women in Indian society"
+      ]
+    }
+  }
+    
+  

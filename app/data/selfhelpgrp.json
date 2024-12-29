@@ -1,0 +1,71 @@
+[
+    {
+      "name": "Kudumbashree",
+      "location": "Kerala",
+      "established": 1997,
+      "overview": "Kudumbashree is one of the largest Self-Help Group (SHG) networks in India, with over 4.5 million members. It was created to address the challenges faced by women in rural Kerala, empowering them through access to financial services and entrepreneurial opportunities. The organization has played a pivotal role in alleviating poverty and advancing gender equality in rural areas.",
+      "focus": "Empowering women through microfinance, skill development, and entrepreneurship.",
+      "impact": "Kudumbashree has significantly improved rural livelihoods by facilitating women's financial inclusion, promoting micro-entrepreneurship, and encouraging community-based initiatives. Its work has boosted women's economic independence, providing access to credit, training, and market linkages.",
+      "image_url": "image files/womengroups/001-Kudumbashree.jpg"
+    },
+    {
+      "name": "SEWA (Self-Employed Women’s Association)",
+      "location": "Gujarat",
+      "established": 1972,
+      "overview": "Founded by Ela Bhatt, SEWA is a trade union dedicated to empowering women workers in the informal sector. SEWA has been instrumental in organizing self-employed women and advocating for their rights. The organization provides support in the form of training, financial assistance, and market opportunities to help women improve their livelihoods.",
+      "focus": "Advocating for women’s rights, supporting self-employment, and providing access to financial services.",
+      "image_url": "image files/womengroups/002-SEWA.jpg",
+      "impact": "SEWA has mobilized thousands of women, helping them secure better economic conditions by facilitating access to credit, health services, insurance, and training. It has created an extensive network of women entrepreneurs who have contributed to economic growth while challenging gender inequality."
+    },
+    {
+      "name": "Manaksar Self Help Group",
+      "location": "Rajasthan",
+      "overview": "The Manaksar Self Help Group consists of 10 women who specialize in stitching and tailoring. This small yet impactful group has seen remarkable success by using their skills to earn a steady income. They have significantly improved their economic status by providing tailoring services to their local community.",
+      "achievements": "Each member earns between Rs. 5,000 to Rs. 6,000 per month, which has greatly enhanced their financial independence.",
+      "image_url": "image files/womengroups/003-Maneskar.jpg",
+      "support": "The group received vocational training from Krishi Vigyan Kendra, which provided the technical know-how to enhance their skills and establish a sustainable business.",
+      "impact": "The group’s success has inspired other women in the region to form similar SHGs, empowering more women to become self-reliant and improve their economic conditions."
+    },
+    {
+      "name": "Shivshakti Self Help Group",
+      "location": "Madhya Pradesh",
+      "overview": "The Shivshakti Self Help Group focuses on masala (spice) production, which has become an important source of livelihood for its members. This group has managed to build a thriving business by processing and selling various spice products.",
+      "achievements": "The group generates a monthly income between Rs. 14,000 and Rs. 16,000, which has improved the standard of living for its members.",
+      "image_url": "image files/womengroups/004-Sivashakthi.jpg",
+      "support": "Training and marketing assistance were provided by Krishi Vigyan Kendra, enabling the group to scale its operations and improve product quality.",
+      "impact": "Shivshakti’s success serves as a model for other SHGs, highlighting the potential of women-led enterprises in traditional sectors like spice production, which are now flourishing thanks to their entrepreneurial skills."
+    },
+    {
+      "name": "Mahalir Mandran Poongarun – III",
+      "location": "Tamil Nadu",
+      "overview": "Mahalir Mandran Poongarun – III is a women's self-help group focused on flower cultivation and selling. What started as a small-scale flower-selling operation has grown into a successful business, thanks to the hard work and innovation of its members.",
+      "image_url": "image files/womengroups/001-Kudumbashree.jpg",
+      "achievements": "The group expanded its operations from local flowers to cultivating and selling a variety of flowers, including roses, which increased its market reach and sales.",
+      "impact": "Through increased sales and market access, the group members have been able to significantly improve their financial status, proving that women in rural areas can succeed in agriculture-based businesses with the right support."
+    },
+    {
+      "name": "Rupa Goswami (Manasha Self Help Group)",
+      "location": "Assam",
+      "overview": "Rupa Goswami, part of the Manasha Self Help Group, developed a small dairy unit, which has grown into a profitable venture. Rupa and other members of the group have utilized their skills to create a sustainable source of income by selling fresh milk and dairy products.",
+      "image_url": "image files/womengroups/006-Manasha_Selfhelp.jpg",
+      "achievements": "Rupa’s dairy unit generates between Rs. 29,000 to Rs. 31,000 per month, providing substantial financial support to her family and community.",
+      "impact": "The success of Rupa’s dairy venture has empowered her and other women in her community to contribute to their families' income, reducing their dependence on external support and fostering financial independence."
+    },
+    {
+      "name": "Pranali",
+      "location": "Unknown",
+      "overview": "Pranali initially faced hesitations and challenges but found success as a jewelry-making trainer. Starting as a student in jewelry making, she later became a successful trainer, imparting skills to other women in her community.",
+      "image_url": "image files/womengroups/007-Pranali.jpg",
+      "achievements": "She now leads her own jewelry training program, which empowers other women by helping them acquire a marketable skill that enhances their financial independence.",
+      "impact": "Pranali’s transformation from a hesitant learner to a successful trainer highlights the importance of skill development and self-confidence in empowering women and enabling them to become entrepreneurs."
+    },
+    {
+      "name": "Nari Shakti Self Help Group",
+      "location": "Maharashtra",
+      "image_url": "image files/womengroups/008-NariShakthi.jpg",
+      "overview": "The Nari Shakti Self Help Group is engaged in the production of candles and pickles, products that have a strong demand in local markets. The group has been successful in creating a niche for its handmade products.",
+      "achievements": "The group has successfully marketed their products and even participated in exhibitions, helping them expand their reach and increase sales.",
+      "impact": "Through these entrepreneurial activities, the members of the Nari Shakti Self Help Group have gained greater financial independence, demonstrating how women-led initiatives can thrive with the right support."
+    }
+  ]
+  

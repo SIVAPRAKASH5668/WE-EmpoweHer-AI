@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Light Mode */
+        body.light-mode {
+            background-color: #F9FAFB;
+            color: #333;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #E4E4E7;
+        }
+
+        .hero-pattern {
+            background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+        }
+
+        .hero-pattern.dark-mode {
+            background: linear-gradient(135deg, #1f1f1f 0%, #2d2d2d 100%);
+        }
+
+        /* Navigation bar */
+        .navbar {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar.light-mode {
+            background-color: #FFFFFF;
+            color: #333;
+        }
+
+        .navbar.dark-mode {
+            background-color: #1F1F1F;
+            color: #E4E4E7;
+        }
+
+        .navbar a {
+            transition: color 0.3s ease;
+        }
+
+        .navbar a.light-mode {
+            color: #333;
+        }
+
+        .navbar a.dark-mode {
+            color: #E4E4E7;
+        }
+
+        .navbar button {
+            background-color: #1D4ED8;
+            color: white;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar button:hover {
+            background-color: #2563EB;
+        }
+
+        /* Image generation section */
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .card.dark-mode {
+            background-color: #1F1F1F;
+        }
+
+        .card-title {
+            color: #333;
+        }
+
+        .card-title.dark-mode {
+            color: #E4E4E7;
+        }
+
+        .card button {
+            background-color: #1D4ED8;
+            color: white;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: #2563EB;
+        }
+
+        .footer {
+            background-color: #FFFFFF;
+            color: #333;
+            padding: 3rem;
+            transition: background-color 0.3s;
+        }
+
+        .footer.dark-mode {
+            background-color: #1F1F1F;
+            color: #E4E4E7;
+        }
+
+        .footer a {
+            color: #1D4ED8;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #2563EB;
+        }
+
+        .footer a.dark-mode {
+            color: #E4E4E7;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-pattern {
+                padding: 8rem 2rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .footer {
+                padding: 2rem 1rem;
+            }
+
+            .footer .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar a {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="light-mode">
+
+    <!-- Navigation -->
+    <nav class="navbar shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="{{ url_for('static', filename='images/We Logo.png') }}" alt="WE Logo" class="h-10 w-10">
+
+                <span class="text-2xl font-semibold">AI Image Generator</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-lg">Home</a>
+                <button class="px-6 py-2 text-lg" id="themeToggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern py-16 text-center">
+        <h1 class="text-5xl font-extrabold mb-4">AI Image Generator</h1>
+        <p class="text-lg mb-6">Transform your ideas into stunning images using AI. Simply provide a prompt, and let the technology work for you.</p>
+    </div>
+
+    <!-- Image Generation Section -->
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <div class="card">
+            <h2 class="card-title text-3xl font-semibold mb-6">Generate an Image</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <textarea id="promptInput" class="w-full p-4 border border-gray-700 rounded-lg text-gray-800" placeholder="Enter your image prompt here..."></textarea>
+                    <button id="generateBtn" class="w-full mt-4 py-3 font-semibold hover:bg-blue-700" onclick="generateImage()">Generate Image</button>
+                </div>
+                <div id="result" class="flex items-center justify-center">
+                    <!-- Result image will appear here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">About</h3>
+                <p class="text-sm">An AI-powered image generation tool that allows you to create stunning visuals based on text prompts. Explore the future of creativity.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-lg">About Us</a></li>
+                    <li><a href="#" class="text-lg">Contact</a></li>
+                    <li><a href="#" class="text-lg">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-sm">© 2024 AI Image Generator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let isGenerating = false;
+
+        async function generateImage() {
+            const promptInput = document.getElementById('promptInput');
+            const generateBtn = document.getElementById('generateBtn');
+            const resultDiv = document.getElementById('result');
+
+            if (isGenerating) return;
+            if (!promptInput.value.trim()) {
+                resultDiv.innerHTML = '<p class="text-red-500">Please enter a prompt.</p>';
+                return;
+            }
+
+            try {
+                isGenerating = true;
+                generateBtn.disabled = true;
+                resultDiv.innerHTML = '<p class="text-blue-500">Generating image...</p>';
+
+                const response = await fetch('/generate_img', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt: promptInput.value.trim() })
+                });
+
+                const data = await response.json();
+
+                if (response.status === 202) {
+                    // Model is still loading
+                    resultDiv.innerHTML = `<p class="text-blue-500">Model is warming up. Please wait approximately ${Math.ceil(data.wait_time)} seconds...</p>`;
+                    setTimeout(() => {
+                        generateImage();
+                    }, data.wait_time * 1000);
+                    return;
+                }
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to generate image');
+                }
+
+                if (data.status === 'success') {
+                    resultDiv.innerHTML = `
+                        <img src="data:image/png;base64,${data.image}" alt="Generated Image" class="rounded-lg max-w-full">
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="text-red-500">${error.message}</p>`;
+            } finally {
+                isGenerating = false;
+                generateBtn.disabled = false;
+            }
+        }
+
+        // Check if user has a saved theme preference
+        const themeToggleButton = document.getElementById('themeToggle');
+        const body = document.body;
+        const navbar = document.querySelector('.navbar');
+        const hero = document.querySelector('.hero-pattern');
+        const card = document.querySelector('.card');
+        const footer = document.querySelector('.footer');
+
+        // Retrieve saved theme from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            navbar.classList.add('dark-mode');
+            hero.classList.add('dark-mode');
+            card.classList.add('dark-mode');
+            footer.classList.add('dark-mode');
+        }
+
+        // Toggle dark and light theme
+        themeToggleButton.addEventListener('click', () => {
+            const isDarkMode = body.classList.contains('dark-mode');
+            if (isDarkMode) {
+                body.classList.remove('dark-mode');
+                navbar.classList.remove('dark-mode');
+                hero.classList.remove('dark-mode');
+                card.classList.remove('dark-mode');
+                footer.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-mode');
+                navbar.classList.add('dark-mode');
+                hero.classList.add('dark-mode');
+                card.classList.add('dark-mode');
+                footer.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>

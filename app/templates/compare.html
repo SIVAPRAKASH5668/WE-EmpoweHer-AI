@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Election Candidate Comparison</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-purple-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white rounded-full p-0"> <!-- Added white background and padding for rounded effect -->
+                        <img src="{{ url_for('static', filename='images/We Logo.png') }}" alt="Logo" class="h-10 w-10">
+                    </div>
+                    <div class="text-xl font-bold">WE-EmpowerHer AI </div>
+                </div>
+                <a href="/" class="hover:text-purple-200 transition duration-300">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8 animate__animated animate__fadeIn">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Indian Election Candidate Comparison</h1>
+            <p class="text-gray-600">Compare and analyze election candidates based on various metrics</p>
+        </div>
+
+        <!-- Comparison Form -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8 animate__animated animate__fadeInUp">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2" for="election-level">
+                        Election Level
+                    </label>
+                    <select id="election-level" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        <option value="regional">Regional (Assembly/Municipal)</option>
+                        <option value="state">State Legislative</option>
+                        <option value="national">Lok Sabha (National)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2" for="sector">
+                        Sector for Comparison
+                    </label>
+                    <select id="sector"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        <option value="women_empowerment">Women Empowerment</option>
+                        <option value="economic_development">Economic Development</option>
+                        <option value="social_welfare">Social Welfare</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="candidates-container" class="space-y-4">
+                <div class="candidate-input bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <input type="text" placeholder="Candidate Name" 
+                                   class="candidate-name w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Constituency/Region" 
+                                   class="candidate-constituency w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Political Party" 
+                                   class="candidate-party w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <button onclick="addCandidateInput()" class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-300">
+                    Add Another Candidate
+                </button>
+                <button onclick="analyzeCandidates()" class="bg-orange-600 text-black px-8 py-2 rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition duration-300">
+                    Compare Candidates
+                </button>
+            </div>
+            
+            
+        </div>
+
+        <!-- Chart Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8 animate__animated animate__fadeIn">
+            <canvas id="performanceChart" class="w-full"></canvas>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+
+    <script>
+        function addCandidateInput() {
+            const container = document.getElementById('candidates-container');
+            const newInput = document.createElement('div');
+            newInput.className = 'candidate-input bg-gray-50 p-6 rounded-lg border border-gray-200';
+            newInput.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <input type="text" placeholder="Candidate Name" 
+                               class="candidate-name w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Constituency/Region" 
+                               class="candidate-constituency w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Political Party" 
+                               class="candidate-party w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                    </div>
+                </div>
+            `;
+            container.appendChild(newInput);
+        }
+
+        async function analyzeCandidates() {
+            const electionLevel = document.getElementById('election-level').value;
+            const sector = document.getElementById('sector').value;
+            
+            const candidateInputs = document.querySelectorAll('.candidate-input');
+            const candidates = Array.from(candidateInputs).map(input => ({
+                name: input.querySelector('.candidate-name').value,
+                constituency: input.querySelector('.candidate-constituency').value,
+                party: input.querySelector('.candidate-party').value,
+                election_level: electionLevel
+            })).filter(c => c.name && c.constituency && c.party);
+
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        candidates,
+                        sector
+                    })
+                });
+
+                const results = await response.json();
+                displayResults(results);
+                createComparisonChart(results);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        function createComparisonChart(results) {
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            const candidates = Object.keys(results);
+            const scores = candidates.map(candidate => results[candidate].performance_scores);
+            
+            const datasets = Object.keys(scores[0]).map((metric, index) => ({
+                label: metric.replace('_', ' ').toUpperCase(),
+                data: candidates.map(candidate => results[candidate].performance_scores[metric]),
+                backgroundColor: `hsla(${index * 360/5}, 70%, 50%, 0.7)`
+            }));
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: candidates,
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 10
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Performance Comparison by Metric'
+                        }
+                    }
+                }
+            });
+        }
+
+        function displayResults(results) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+            
+            for (const [candidate, analysis] of Object.entries(results)) {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeIn';
+                
+                const scoreGrid = Object.entries(analysis.performance_scores)
+                    .map(([metric, score]) => `
+                        <div class="p-4 text-center">
+                            <div class="text-sm font-medium text-gray-600">${metric.replace('_', ' ')}</div>
+                            <div class="text-2xl font-bold text-orange-600">${score}/10</div>
+                        </div>
+                    `).join('');
+                
+                card.innerHTML = `
+                    <div class="bg-orange-600 text-white px-6 py-4">
+                        <h3 class="text-xl font-bold">${candidate}</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Summary</h4>
+                            <p class="text-gray-600">${analysis.summary}</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Track Record</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                ${analysis.track_record.initiatives.map(i => `<li>${i}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Current Agenda</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                ${analysis.current_agenda.promises.map(p => `<li>${p}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            ${scoreGrid}
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Recommendations</h4>
+                            <ul class="space-y-2">
+                                ${analysis.recommendations.map(r => `
+                                    <li class="flex items-center text-gray-600">
+                                        <svg class="w-5 h-5 text-orange-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        ${r}
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                
+                resultsContainer.appendChild(card);
+            }
+        }
+    </script>
+</body>
+</html>

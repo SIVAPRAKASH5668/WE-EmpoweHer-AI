@@ -1,0 +1,37 @@
+{
+    "description": "India follows a multi-party democratic system...",
+    "election_types": ["Lok Sabha", "Rajya Sabha", "State Legislative", "Presidential"],
+    "political_parties": [
+      {"name": "BJP", "founded": "1980"},
+      {"name": "INC", "founded": "1885"}
+    ],
+    "voting_age": 18,
+    "recent_elections": [
+      {
+        "year": 2019,
+        "winner": "BJP",
+        "seats_won": 303,
+        "vote_share": 37.36,
+        "turnout": 67.11
+      }
+    ],
+    "state_elections": [
+      {
+        "state": "Maharashtra",
+        "last_election": {
+          "year": 2019,
+          "winner": "BJP-SS Alliance",
+          "seats_won": 161,
+          "vote_share": 42.1,
+          "turnout": 60.5
+        },
+        "ruling_party": "BJP-SS Alliance",
+        "opposition": "INC-NCP",
+        "total_seats": 288
+      }
+    ],
+    "electoral_facts": {
+      "Largest Democracy": "India is the world's largest democracy",
+      "First Election": "First general elections held in 1951-52"
+    }
+  }

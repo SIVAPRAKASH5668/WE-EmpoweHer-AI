@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Electoral System - Wikipedia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-light: #f8f9fa;
+            --text-color: #333;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar input {
+            padding: 0.5rem;
+            width: 300px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr 300px;
+            gap: 30px;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+        }
+
+        .toc {
+            background: var(--background-light);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .toc h2 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .toc ol {
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 10px;
+        }
+
+        .toc a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: var(--secondary-color);
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .infobox {
+            background: var(--background-light);
+            border-radius: 8px;
+            padding: 20px;
+            position: sticky;
+            top: 80px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .infobox table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .infobox th, .infobox td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .infobox th {
+            text-align: left;
+            color: var(--primary-color);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .state-election-banner {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .state-election-banner:hover {
+            transform: translateY(-2px);
+        }
+
+        .reference {
+            font-size: 0.8em;
+            vertical-align: super;
+            color: var(--secondary-color);
+        }
+
+        .categories {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar, .infobox {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar shadow-lg" style="
+    background: white;
+    padding: 1%;
+">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center" style="
+    background: aliceblue;
+">
+            <div class="flex items-center space-x-3">
+                <img src="/static/images/We%20Logo.png" alt="WE Logo" class="h-10 w-10">
+
+                <span class="text-2xl font-semibold">WE-EmpowerHer AI</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-lg">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="toc">
+                <h2>Contents</h2>
+                <ol>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#structure">Electoral Structure</a></li>
+                    <li><a href="#commission">Election Commission</a></li>
+                    <li><a href="#process">Electoral Process</a></li>
+                    <li><a href="#voting">Voting System</a></li>
+                    <li><a href="#reforms">Electoral Reforms</a></li>
+                    <li><a href="#challenges">Challenges</a></li>
+                    <li><a href="#references">References</a></li>
+                </ol>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h1>Indian Electoral System</h1>
+            
+            <p>The <b>Indian Electoral System</b> is the constitutional framework that governs elections in India, the world's largest democracy. The system manages elections for the Lok Sabha (lower house), Rajya Sabha (upper house), state legislatures, and various other local bodies.</p>
+
+            <div class="state-election-banner" onclick="window.location.href='/indian_state_election_system'">
+                <div>
+                    <h3>Explore State Election System</h3>
+                    <p>Learn about the electoral process at the state level</p>
+                </div>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <!-- Rest of the content from the original HTML -->
+            <!-- [Previous sections remain the same: History, Electoral Structure, etc.] -->
+            <h2 id="history">History</h2>
+            <p>The electoral system in India was established with the adoption of the Constitution in 1950. The first general elections were held between 1951 and 1952, marking the beginning of democratic governance in independent India. The Election Commission of India was established on January 25, 1950, a day before India became a republic.<sup class="reference">[1]</sup></p>
+
+            <h3>Key Historical Developments</h3>
+            <ul>
+                <li><b>1951-52:</b> First general elections conducted using ballot papers</li>
+                <li><b>1989:</b> Introduction of voter ID cards</li>
+                <li><b>1998:</b> Electronic Voting Machines (EVMs) introduced</li>
+                <li><b>2014:</b> Introduction of VVPAT (Voter Verifiable Paper Audit Trail)</li>
+            </ul>
+
+            <h2 id="structure">Electoral Structure</h2>
+            <p>The Indian electoral structure is organized at multiple levels:</p>
+
+            <h3>Parliamentary Elections</h3>
+            <p>The Parliament of India consists of two houses:</p>
+            <ul>
+                <li><b>Lok Sabha:</b> 543 elected members from single-member constituencies</li>
+                <li><b>Rajya Sabha:</b> 245 members, with 233 elected by state legislatures</li>
+            </ul>
+
+            <h3>State Elections</h3>
+            <p>Each state has its own legislative assembly (Vidhan Sabha) with members elected from single-member constituencies. Some states also have a legislative council (Vidhan Parishad).</p>
+
+            <h2 id="commission">Election Commission</h2>
+            <p>The Election Commission of India (ECI) is an autonomous constitutional authority responsible for administering election processes. It consists of:</p>
+            <ul>
+                <li>Chief Election Commissioner</li>
+                <li>Two Election Commissioners</li>
+            </ul>
+
+            <h3>Powers and Functions</h3>
+            <ul>
+                <li>Supervising elections</li>
+                <li>Maintaining electoral rolls</li>
+                <li>Setting election schedules</li>
+                <li>Implementing Model Code of Conduct</li>
+                <li>Recognition of political parties</li>
+            </ul>
+
+            <h2 id="process">Electoral Process</h2>
+            <p>The electoral process involves several stages:</p>
+
+            <h3>Pre-Election Phase</h3>
+            <ul>
+                <li>Delimitation of constituencies</li>
+                <li>Voter registration</li>
+                <li>Nomination of candidates</li>
+                <li>Scrutiny of nominations</li>
+                <li>Election campaign</li>
+            </ul>
+
+            <h3>Election Phase</h3>
+            <ul>
+                <li>Polling day arrangements</li>
+                <li>Electronic voting</li>
+                <li>Security measures</li>
+                <li>Vote counting</li>
+                <li>Declaration of results</li>
+            </ul>
+
+            <h2 id="voting">Voting System</h2>
+            <p>India follows the First-Past-the-Post (FPTP) voting system, where:</p>
+            <ul>
+                <li>Each voter casts one vote</li>
+                <li>Candidate with highest number of votes wins</li>
+                <li>No minimum percentage required</li>
+            </ul>
+
+            <h3>Electronic Voting Machines (EVMs)</h3>
+            <p>EVMs have been used nationwide since 2004, featuring:</p>
+            <ul>
+                <li>Tamper-proof design</li>
+                <li>Battery operation</li>
+                <li>Maximum 2000 votes per unit</li>
+                <li>VVPAT integration for verification</li>
+            </ul>
+
+            <h2 id="reforms">Electoral Reforms</h2>
+            <p>Major reforms implemented include:</p>
+            <ul>
+                <li>Introduction of EVMs and VVPAT</li>
+                <li>Criminalization of seeking votes on religious grounds</li>
+                <li>Mandatory disclosure of criminal records</li>
+                <li>Limits on campaign expenditure</li>
+                <li>Right to reject candidates (NOTA)</li>
+            </ul>
+
+            <h2 id="challenges">Challenges and Criticisms</h2>
+            <p>The system faces several challenges:</p>
+            <ul>
+                <li>Money power in elections</li>
+                <li>Criminalization of politics</li>
+                <li>Voter registration issues</li>
+                <li>EVM tampering concerns</li>
+                <li>Electoral roll discrepancies</li>
+            </ul>
+
+            <h2 id="references">References</h2>
+            <ol>
+                <li>Election Commission of India Official Website</li>
+                <li>Constitution of India, Part XV</li>
+                <li>Representation of the People Act, 1951</li>
+                <li>Electoral Statistics, Statistical Report, ECI</li>
+            </ol>
+
+
+            <div class="categories">
+                Categories: Elections in India | Electoral systems | Democracy | Government of India
+            </div>
+        </main>
+
+        <aside class="infobox">
+            <h3>Indian Electoral System</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <td>First-past-the-post voting</td>
+                </tr>
+                <tr>
+                    <th>Election Commission</th>
+                    <td>Election Commission of India (ECI)</td>
+                </tr>
+                <tr>
+                    <th>Voter Age</th>
+                    <td>18 years</td>
+                </tr>
+                <tr>
+                    <th>Lok Sabha Seats</th>
+                    <td>543</td>
+                </tr>
+                <tr>
+                    <th>Last Election</th>
+                    <td>2019</td>
+                </tr>
+            </table>
+        </aside>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchayat Election Analysis Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-purple-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white rounded-full p-0">
+                        <img src="{{ url_for('static', filename='images/We Logo.png') }}" alt="Logo" class="h-10 w-10">
+                    </div>
+                    <div class="text-xl font-bold">WE-EmpowerHer AI</div>
+                </div>
+                <a href="/" class="hover:text-purple-200 transition duration-300">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-8">
+        <!-- Header Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8 animate__animated animate__fadeIn">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Election Data Analysis Dashboard</h1>
+            <p class="text-gray-600">Analyze panchayat election data by location</p>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Analysis Parameters Form -->
+            <div class="bg-white rounded-lg shadow-lg p-6 animate__animated animate__fadeInLeft">
+                <h2 class="text-xl font-bold text-purple-700 mb-6">Analysis Parameters</h2>
+                <form id="electionForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" for="state">
+                            State
+                        </label>
+                        <select id="state" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" required>
+                            <option value="">Select a state</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" for="district">
+                            District
+                        </label>
+                        <input type="text" id="district" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" for="village">
+                            Village
+                        </label>
+                        <input type="text" id="village" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" required>
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-300">
+                        Analyze Data
+                    </button>
+                </form>
+            </div>
+
+            <!-- Results Display -->
+            <div id="resultContainer" class="bg-white rounded-lg shadow-lg p-6 hidden animate__animated animate__fadeInRight">
+                <h2 class="text-xl font-bold text-purple-700 mb-6">Analysis Results</h2>
+                
+                <!-- Loading Indicator -->
+                <div id="loadingIndicator" class="hidden py-20">
+                    <div class="flex justify-center items-center space-x-2">
+                        <div class="w-4 h-4 bg-purple-600 rounded-full animate-bounce"></div>
+                        <div class="w-4 h-4 bg-purple-600 rounded-full animate-bounce delay-100"></div>
+                        <div class="w-4 h-4 bg-purple-600 rounded-full animate-bounce delay-200"></div>
+                    </div>
+                </div>
+
+                <!-- Results Content -->
+                <div id="resultContent" class="space-y-8">
+                    <!-- Election Status Card -->
+                    <div class="bg-purple-50 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-purple-800 mb-3">Election Status</h3>
+                        <p id="electionStatus" class="text-gray-700"></p>
+                        <p id="lastElectionDate" class="text-sm text-gray-500 mt-2"></p>
+                    </div>
+
+                    <!-- Results Card -->
+                    <div class="bg-purple-50 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-purple-800 mb-3">Election Results</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Winning Party</p>
+                                <p id="winningParty" class="font-medium text-gray-800"></p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Winner Name</p>
+                                <p id="winnerName" class="font-medium text-gray-800"></p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Vote Share</p>
+                                <p id="voteShare" class="font-medium text-gray-800"></p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Total Votes</p>
+                                <p id="totalVotes" class="font-medium text-gray-800"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance Metrics Card -->
+                    <div class="bg-purple-50 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-purple-800 mb-3">Performance Metrics</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm text-gray-500 mb-2">Development Projects</p>
+                                <ul id="developmentProjects" class="list-disc list-inside text-gray-700"></ul>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Budget Utilization</p>
+                                    <p id="budgetUtilization" class="font-medium text-gray-800"></p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Citizen Satisfaction</p>
+                                    <p id="citizenSatisfaction" class="font-medium text-gray-800"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voter Information Card -->
+                    <div class="bg-purple-50 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-purple-800 mb-3">Voter Information</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Total Registered</p>
+                                <p id="totalRegistered" class="font-medium text-gray-800"></p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Turnout Percentage</p>
+                                <p id="turnoutPercentage" class="font-medium text-gray-800"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 mb-2">Demographic Split</p>
+                            <div class="grid grid-cols-3 gap-4 bg-white rounded-lg p-4">
+                                <div>
+                                    <p class="text-xs text-gray-500">Male</p>
+                                    <p id="maleSplit" class="font-medium text-gray-800"></p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500">Female</p>
+                                    <p id="femaleSplit" class="font-medium text-gray-800"></p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500">Other</p>
+                                    <p id="otherSplit" class="font-medium text-gray-800"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fetch states list on page load
+        $(document).ready(function () {
+            $.get('/api/states', function (response) {
+                if (response.success) {
+                    const stateSelect = $('#state');
+                    response.data.forEach(state => {
+                        stateSelect.append($('<option>', {
+                            value: state,
+                            text: state
+                        }));
+                    });
+                } else {
+                    alert('Error fetching states: ' + response.error);
+                }
+            });
+        });
+
+        // Handle form submission
+        $('#electionForm').on('submit', function (event) {
+            event.preventDefault();
+
+            // Show loading state
+            $('#resultContainer').removeClass('hidden');
+            $('#loadingIndicator').removeClass('hidden');
+            $('#resultContent').addClass('hidden');
+
+            $.ajax({
+                url: 'panchayat_analyze',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    state: $('#state').val(),
+                    district: $('#district').val(),
+                    village: $('#village').val()
+                }),
+                success: function (data) {
+                    // Hide loading indicator
+                    $('#loadingIndicator').addClass('hidden');
+                    $('#resultContent').removeClass('hidden');
+
+                    if (data.success) {
+                        // Update result sections
+                        const electionData = data.data;
+                        $('#electionStatus').text(electionData.election_status.current_status);
+                        $('#lastElectionDate').text(`Last Election Date: ${electionData.election_status.last_election_date || 'N/A'}`);
+                        $('#winningParty').text(electionData.election_results.party_affiliation || 'N/A');
+                        $('#winnerName').text(electionData.election_results.winning_candidate || 'N/A');
+                        $('#voteShare').text(electionData.election_results.margin_of_victory || 'N/A');
+                        $('#totalVotes').text(electionData.election_results.voter_turnout || 'N/A');
+
+                        // Update performance metrics
+                        $('#developmentProjects').empty();
+                        electionData.performance_analysis.development_projects.forEach(project => {
+                            $('#developmentProjects').append($('<li>').text(project));
+                        });
+                        $('#budgetUtilization').text(electionData.performance_analysis.budget_utilization || 'N/A');
+                        $('#citizenSatisfaction').text(electionData.performance_analysis.community_satisfaction || 'N/A');
+
+                        // Update voter data
+                        $('#totalRegistered').text(electionData.demographic_data.total_population || 'N/A');
+                        $('#turnoutPercentage').text(electionData.demographic_data.eligible_voters || 'N/A');
+                        $('#maleSplit').text(electionData.demographic_data.gender_ratio || 'N/A');
+                        $('#femaleSplit').text(electionData.demographic_data.gender_ratio || 'N/A');
+                        $('#otherSplit').text('N/A');
+                    } else {
+                        $('#resultContent').html(
+                            `<div class="bg-red-50 border border-red-400 text-red-700 px-4 py-3 rounded-lg" role="alert">
+                                <p class="font-bold">Error</p>
+                                <p>${data.error || 'An error occurred while fetching the data.'}</p>
+                            </div>`
+                        ).removeClass('hidden');
+                    }
+                },
+                error: function (error) {
+                    $('#loadingIndicator').addClass('hidden');
+                    $('#resultContent').html(
+                        `<div class="bg-red-50 border border-red-400 text-red-700 px-4 py-3 rounded-lg" role="alert">
+                            <p class="font-bold">Error</p>
+                            <p>${error.responseJSON?.error || 'An error occurred while fetching the data.'}</p>
+                        </div>`
+                    ).removeClass('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

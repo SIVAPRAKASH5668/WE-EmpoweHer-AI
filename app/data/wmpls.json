@@ -1,0 +1,925 @@
+{
+
+    "Hema Malini": {
+        "constituency": "Mathura, Uttar Pradesh",
+        "initiatives": [
+            "Cultural heritage preservation projects",
+            "Clean Yamuna initiative",
+            "Rural road development",
+            "Women's safety programs",
+            "Tourism development projects"
+        ],
+        "key_achievements": "Focus on cultural preservation and infrastructure development",
+        "image_url": "image files/loksabha/001-Hema_Malini.jpg"
+    },
+    
+
+    
+    "Kirron Kher": {
+        "constituency": "Chandigarh",
+        "initiatives": [
+            "Smart City implementation",
+            "Education infrastructure development",
+            "Women's safety initiatives",
+            "Healthcare facility upgrades",
+            "Public transport improvement"
+        ],
+        "image_url": "image files/loksabha/002-Kirron_kher.jpg",
+        "key_achievements": "Enhanced urban infrastructure and education facilities"
+    },
+
+
+
+    
+    "Sushri Shobha Karandlaje": {
+        "constituency": "Udupi-Chikmagalur, Karnataka",
+        "initiatives": [
+            "Focused on rural development",
+            "Implemented water conservation programs",
+            "Enhanced agricultural welfare schemes",
+            "Promoted tourism in the region"
+        ],
+        "image_url": "image files/loksabha/003-Shoba_Kharandlaje.jpg",
+        "key_achievements": "Improved rural infrastructure and agricultural sector"
+    },
+
+    "Pratima Bhoumik": {
+        "constituency": "Tripura West, Tripura",
+        "initiatives": [
+            "Promoted women empowerment",
+            "Developed healthcare facilities",
+            "Improved access to education",
+            "Implemented tribal welfare programs"
+        ],
+        "image_url": "image files/loksabha/004-Pratima_Bhoumik.jpg",
+        "key_achievements": "Focused on tribal welfare and women’s empowerment"
+    },
+
+
+
+    "Rupa Ganguly": {
+        "constituency": "Howrah, West Bengal",
+        "initiatives": [
+            "Started education programs for women and children",
+            "Promoted cultural activities",
+            "Increased healthcare awareness",
+            "Implemented local community welfare programs"
+        ],
+        "image_url": "image files/loksabha/005-Rupa_Ganguly.jpg",
+        "key_achievements": "Focus on community welfare and education"
+    },
+
+    "Mimi Chakraborty": {
+        "constituency": "Jadavpur, West Bengal",
+        "initiatives": [
+            "Focused on youth welfare programs",
+            "Promoted education for underprivileged children",
+            "Implemented healthcare facilities in rural areas",
+            "Worked on improving local roads and infrastructure"
+        ],
+        "image_url": "image files/loksabha/006-Mimi_Chakrobaty.jpg",
+        "key_achievements": "Improved infrastructure and youth empowerment"
+    },
+
+    "Dimple Yadav": {
+        "constituency": "Kannauj, Uttar Pradesh",
+        "initiatives": [
+            "Launched women's safety initiatives",
+            "Promoted health and sanitation programs",
+            "Focused on education for girls",
+            "Implemented rural development projects"
+        ],
+        "image_url": "image files/loksabha/006-Mimi_Chakrobaty.jpg",
+        "key_achievements": "Advocated for women’s rights and rural development"
+    },
+    
+    "Heena Vijayakumar Gavit": {
+        "constituency": "Nandurbar, Maharashtra",
+        "initiatives": [
+            "Advocated for tribal welfare programs",
+            "Worked on improving rural infrastructure, including roads and water supply systems",
+            "Focused on women’s empowerment through skill development and awareness campaigns"
+        ],
+        "image_url": "image files/loksabha/008-Hina_Gavit.jpg",
+        "key_achievements": "Promoted tribal welfare and improved basic infrastructure in Nandurbar"
+    },
+
+    "Bhavana Gawali": {
+        "constituency": "Yavatmal-Washim, Maharashtra",
+        "initiatives": [
+            "Worked on improving agricultural welfare schemes",
+            "Focused on better irrigation facilities and farmer support programs",
+            "Initiated rural development projects, including road construction"
+        ],
+        "image_url": "image files/loksabha/009-Bhavana_Gawali.jpg",
+        "key_achievements": "Improved agricultural welfare and rural infrastructure in Yavatmal-Washim"
+    },
+
+    "Bharati Pravin Pawar": {
+        "constituency": "Dindori, Maharashtra",
+        "initiatives": [
+            "Focused on improving healthcare facilities, especially in rural areas",
+            "Promoted women's health and awareness programs",
+            "Worked on rural road development and water supply systems"
+        ],
+        "image_url": "image files/loksabha/010-Bharti_Pravin_Pawar.jpg",
+        "key_achievements": "Enhanced healthcare access and rural development in Dindori"
+    },
+
+    "Supriya Sule": {
+        "constituency": "Baramati, Maharashtra",
+        "initiatives": [
+            "Worked on improving agriculture and rural development programs",
+            "Launched women empowerment initiatives",
+            "Promoted educational reforms and skill development"
+        ],
+        "image_url": "image files/loksabha/011-Supriya_Sule.jpg",
+        "key_achievements": "Strengthened rural development and women empowerment in Baramati"
+    },
+
+    "Pritam Munde": {
+        "constituency": "Beed, Maharashtra",
+        "initiatives": [
+            "Launched programs for rural healthcare and sanitation",
+            "Promoted skill development and entrepreneurship among women",
+            "Focused on improving education and infrastructure in rural areas"
+        ],
+        "image_url": "image files/loksabha/012-Pritam_Munde.jpg",
+        "key_achievements": "Worked on rural development and women empowerment in Beed"
+    },
+
+    "Raksha Khadse": {
+        "constituency": "Raver, Maharashtra",
+        "initiatives": [
+            "Focused on rural development, including water conservation projects",
+            "Worked on improving healthcare facilities",
+            "Promoted women's safety and empowerment programs"
+        ],
+        "image_url": "image files/loksabha/013-Raksha_khadse.jpg",
+        "key_achievements": "Promoted rural development and women's welfare in Raver"
+    },
+
+    "Navnit Rana": {
+        "constituency": "Amravati, Maharashtra",
+        "initiatives": [
+            "Focused on education and healthcare improvements",
+            "Promoted women’s safety and empowerment programs",
+            "Worked on infrastructure development in rural areas"
+        ],
+        "image_url": "image files/loksabha/014-Navneet_Rana.jpg",
+        "key_achievements": "Improved education, healthcare, and women's safety in Amravati"
+    
+    },
+
+    "Aparajita Sarangi": {
+        "constituency": "Bhubaneswar, Odisha",
+        "initiatives": [
+            "Promoted digital education and e-governance",
+            "Implemented urban infrastructure projects",
+            "Focused on women empowerment through skill development programs",
+            "Launched sanitation and clean water initiatives",
+            "Advocated for agricultural reforms"
+        ],
+        "image_url": "image files/loksabha/015-Aparjita_Sarangi.jpg",
+        "key_achievements": "Revitalized Bhubaneswar with infrastructure and welfare schemes"
+    },
+    "Sangeeta Kumari Singh Deo": {
+        "constituency": "Bolangir, Odisha",
+        "initiatives": [
+            "Improved healthcare access and established new health centers",
+            "Promoted rural development with a focus on agriculture",
+            "Advocated for women's education and empowerment",
+            "Focused on clean drinking water and sanitation projects",
+            "Led initiatives for improving roads and infrastructure"
+        ],
+        "image_url": "image files/loksabha/016-Sangeeta_Kumari.jpg",
+        "key_achievements": "Strengthened rural infrastructure and improved healthcare in Bolangir"
+    },
+    "Pratima Bisoyi": {
+        "constituency": "Aska, Odisha",
+        "initiatives": [
+            "Worked to improve education and literacy rates",
+            "Introduced women's entrepreneurship programs",
+            "Implemented rural development and infrastructure upgrades",
+            "Promoted healthcare initiatives for rural communities",
+            "Launched programs to combat malnutrition"
+        ],
+
+        "key_achievements": "Improved education and healthcare services in Aska"
+    },
+    "Rajashree Mallick": {
+        "constituency": "Jagatsinghpur, Odisha",
+        "initiatives": [
+            "Focused on infrastructure and rural development",
+            "Launched programs for women's empowerment",
+            "Worked towards improving road and transportation networks",
+            "Introduced agricultural reforms for better crop yield",
+            "Promoted clean drinking water and sanitation projects"
+        ],
+        "image_url": "image files/loksabha/018-Rajashree_Maliick.jpg",
+        "key_achievements": "Boosted rural development and infrastructure in Jagatsinghpur"
+    },
+    "Manjulata Mandal": {
+        "constituency": "Bhadrak, Odisha",
+        "initiatives": [
+            "Advocated for better healthcare facilities",
+            "Focused on educational reforms for women and children",
+            "Implemented rural infrastructure projects",
+            "Launched skill development programs",
+            "Worked on improving local agricultural practices"
+        ],
+        "image_url": "image files/loksabha/019-Manjulata_Mandal.jpg",
+        "key_achievements": "Enhanced education and healthcare in Bhadrak"
+    },
+    "Chandrani Murmu": {
+        "constituency": "Keonjhar, Odisha",
+        "initiatives": [
+            "Worked towards improving healthcare services",
+            "Promoted women’s self-help groups and entrepreneurship",
+            "Launched skill development programs for youth",
+            "Focused on rural electrification and infrastructure",
+            "Advocated for sustainable agricultural practices"
+        ],
+        "image_url": "image files/loksabha/020-Chandrani_Murmu.jpg",
+        "key_achievements": "Transformed Keonjhar with a focus on education, healthcare, and infrastructure"
+    },
+    "Bharati Ben Shiyal": {
+        "constituency": "Bhavnagar, Gujarat",
+        
+        "initiatives": [
+            "Focused on women’s empowerment through education and health",
+            "Worked towards improving infrastructure and sanitation",
+            "Promoted agricultural reforms to support farmers",
+            "Launched skill development programs for youth",
+            "Enhanced digital literacy and e-governance"
+        ],
+        "image_url": "image files/loksabha/021-Bhartiben_Shiyal.jpg",
+        "key_achievements": "Improved local infrastructure and empowered women in Bhavnagar"
+    },
+    "Geetaben Rathva": {
+        "constituency": "Chhota Udaipur, Gujarat",
+      
+        "initiatives": [
+            "Worked towards the development of rural areas",
+            "Promoted health and education initiatives for women",
+            "Focused on improving access to clean drinking water",
+            "Launched skill development programs for women and youth",
+            "Improved agricultural productivity and market access"
+        ],
+        "image_url": "image files/loksabha/022-Geetaben_Rathwa.jpg",
+        "key_achievements": "Development of Chhota Udaipur through infrastructure and social welfare programs"
+    },
+    "Poonamben Maadam": {
+        "constituency": "Jamnagar, Gujarat",
+      
+        "initiatives": [
+            "Focused on healthcare and women’s education",
+            "Promoted environmental sustainability through local initiatives",
+            "Developed infrastructure and roads in rural areas",
+            "Improved water supply and sanitation systems",
+            "Launched skill development programs for women"
+        ],
+        "image_url": "image files/loksabha/023-Poonamben_Maadam.jpg",
+        "key_achievements": "Empowered women and contributed to Jamnagar’s infrastructure growth"
+    },
+    "Darshana Jardosh": {
+        "constituency": "Surat, Gujarat",
+
+        "initiatives": [
+            "Led digital education initiatives for students",
+            "Promoted the development of Surat’s textile and diamond industries",
+            "Advocated for women’s entrepreneurship and economic independence",
+            "Worked on improving urban infrastructure",
+            "Focused on sustainable development practices"
+        ],
+        "image_url": "image files/loksabha/024-Darshana_Jardosh.jpg",
+        "key_achievements": "Spearheaded Surat’s growth in industry, education, and infrastructure"
+    },
+    "Ranjanben Bhatt": {
+        "constituency": "Vadodara, Gujarat",
+        "initiatives": [
+            "Improved health and sanitation services in Vadodara",
+            "Developed infrastructure for better connectivity",
+            "Launched skill development programs to empower women",
+            "Focused on digital literacy in rural areas",
+            "Introduced agricultural reforms to improve farmers' livelihoods"
+        ],
+        "image_url": "image files/loksabha/025-Ranjenben_Bhatt.jpg",
+        "key_achievements": "Enhanced infrastructure and welfare programs in Vadodara"
+    },
+    "Shardaben Anilbhai Patel": {
+        "constituency": "Mahesana, Gujarat",
+        "initiatives": [
+            "Worked on the development of rural and urban infrastructure",
+            "Promoted women’s health, education, and empowerment",
+            "Launched clean water and sanitation programs",
+            "Supported agricultural reforms and farmer welfare schemes",
+            "Focused on digitalization and e-governance"
+        ],
+        "image_url": "image files/loksabha/026-Shardhaben_Anilbai.jpg",
+        "key_achievements": "Improved infrastructure, women’s welfare, and agricultural reforms in Mahesana"
+    },
+    "Chinta Anuradha": {
+        "constituency": "Amalapuram, Andhra Pradesh",
+
+        "initiatives": [
+            "Focused on improving rural infrastructure",
+            "Promoted women’s empowerment through skill development",
+            "Advocated for better healthcare and sanitation",
+            "Worked on enhancing educational opportunities for women and children",
+            "Supported farmers’ welfare and agricultural reforms"
+        ],
+        "image_url": "image files/loksabha/027-Chinta_Anuradha.jpg",
+        "key_achievements": "Empowered rural communities with infrastructure and welfare programs in Amalapuram"
+    },
+    "Goddeti Madhavi": {
+        "constituency": "Araku, Andhra Pradesh",
+
+        "initiatives": [
+            "Focused on the development of tribal areas",
+            "Promoted education, especially for girls in rural and tribal regions",
+            "Worked on improving healthcare and sanitation facilities",
+            "Advocated for better access to clean drinking water",
+            "Launched skill development programs to support youth employment"
+        ],
+        "image_url": "image files/loksabha/027-Chinta_Anuradha.jpg",
+        "key_achievements": "Worked towards tribal development and women's empowerment in Araku"
+    },
+    "Vanga Geethaviswanath": {
+        "constituency": "Kakinada, Andhra Pradesh",
+
+        "initiatives": [
+            "Led the efforts for infrastructure development in urban and rural areas",
+            "Worked on improving healthcare services for women and children",
+            "Promoted the development of small and medium-sized enterprises",
+            "Focused on improving education and vocational training programs",
+            "Launched initiatives to support women’s entrepreneurship"
+        ],
+        "image_url": "image files/loksabha/029-Vanga_Geetha.jpg",
+        "key_achievements": "Transformed Kakinada with infrastructure improvements and empowerment programs"
+    },
+    "Beesetti Venkata Satyavathi": {
+        "constituency": "Anakapalli, Andhra Pradesh",
+        "initiatives": [
+            "Promoted rural development and better road infrastructure",
+            "Focused on improving health and education services in Anakapalli",
+            "Launched clean water and sanitation projects",
+            "Supported agricultural reforms for the benefit of local farmers",
+            "Worked on women’s skill development and financial independence"
+        ],
+        "image_url": "image files/loksabha/030-Beesetti_Venkata.jpg",
+        "key_achievements": "Enhanced Anakapalli with rural development and welfare initiatives"
+    },
+    "Pragya Singh Thakur": {
+        "constituency": "Bhopal, Madhya Pradesh",
+      
+        "initiatives": [
+            "Focused on national security and public safety",
+            "Promoted the development of infrastructure in Bhopal",
+            "Worked towards women’s empowerment through skill development",
+            "Advocated for better healthcare and sanitation facilities",
+            "Supported youth empowerment and employment opportunities"
+        ],
+        "image_url": "image files/loksabha/031-Pragya_Thakur.jpg",
+        "key_achievements": "Focused on security, infrastructure development, and women’s empowerment in Bhopal"
+    },
+    "Sandhya Ray": {
+        "constituency": "Bhind, Madhya Pradesh",
+       
+        "initiatives": [
+            "Worked towards the development of rural areas and local infrastructure",
+            "Focused on improving healthcare services for women and children",
+            "Promoted educational initiatives, especially for girls",
+            "Advocated for better access to clean drinking water and sanitation",
+            "Supported farmers with agricultural reforms and welfare schemes"
+        ],
+        "image_url": "image files/loksabha/032-Sandhya-Ray.jpg",
+        "key_achievements": "Improved rural infrastructure and women’s welfare in Bhind"
+    },
+    "Riti Pathak": {
+        "constituency": "Sidhi, Madhya Pradesh",
+      
+        "initiatives": [
+            "Focused on the development of rural infrastructure",
+            "Promoted women’s education and skill development",
+            "Worked towards improving healthcare facilities in Sidhi",
+            "Launched sanitation and clean water initiatives",
+            "Advocated for better access to government services for rural populations"
+        ],
+        "image_url": "image files/loksabha/033-Rithi_pathak.jpg",
+        "key_achievements": "Empowered women and developed rural infrastructure in Sidhi"
+    },
+    "Himadri Singh": {
+        "constituency": "Shahdol, Madhya Pradesh",
+ 
+        "initiatives": [
+            "Promoted the welfare of tribal communities and rural development",
+            "Focused on improving healthcare and sanitation in Shahdol",
+            "Worked on enhancing educational opportunities for girls",
+            "Advocated for women’s empowerment and financial independence",
+            "Supported farmers with agricultural reforms and financial aid"
+        ],
+        "image_url": "image files/loksabha/034-Himadhri_Singh.jpg",
+        "key_achievements": "Worked on tribal development and women’s empowerment in Shahdol"
+    },
+    "Jyotsna Mahant": {
+        "constituency": "Korba, Chhattisgarh",
+        "party": "INC",
+        "initiatives": [
+            "Focused on improving infrastructure in rural and urban areas",
+            "Promoted women’s empowerment and skill development programs",
+            "Worked towards improving healthcare services for women and children",
+            "Advocated for better education opportunities for girls",
+            "Supported agricultural reforms and farmers' welfare"
+        ],
+        "image_url": "image files/loksabha/035-Jyotsana_Mahat.jpg",
+        "key_achievements": "Worked on rural development and women’s empowerment in Korba"
+    },
+    "Gomtee Sai": {
+        "constituency": "Raigarh, Chhattisgarh",
+        "party": "BJP",
+        "initiatives": [
+            "Improved infrastructure and road connectivity in Raigarh",
+            "Promoted healthcare initiatives for women and children",
+            "Worked on providing skill development and employment opportunities for women",
+            "Focused on rural development and farmers’ welfare",
+            "Launched water and sanitation programs for better living conditions"
+        ],
+        "image_url": "image files/loksabha/036-Gomtee_Sai.jpg",
+        "key_achievements": "Enhanced infrastructure and social welfare programs in Raigarh"
+    },
+    "Renuka Singh": {
+        "constituency": "Sarguja, Chhattisgarh",
+        "party": "BJP",
+        "initiatives": [
+            "Worked on the development of rural and tribal areas",
+            "Focused on women’s empowerment through education and vocational training",
+            "Promoted agricultural reforms and support for farmers",
+            "Improved healthcare and sanitation facilities in Sarguja",
+            "Launched initiatives for the empowerment of youth and women"
+        ],
+        "image_url": "image files/loksabha/037-Renuka_Singh.jpg",
+        "key_achievements": "Led rural and tribal development projects and women’s empowerment programs in Sarguja"
+    },
+    "Rama Devi": {
+        "constituency": "Sheohar, Bihar",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on rural infrastructure and rural health programs",
+            "Promoted women’s education and skill development",
+            "Improved water supply and sanitation facilities in Sheohar",
+            "Worked on providing better access to healthcare and education for women",
+            "Launched initiatives for youth empowerment and employment"
+        ],
+        "image_url": "image files/loksabha/038-Rama_Devi.jpg",
+        "key_achievements": "Empowered women and developed infrastructure in Sheohar"
+    },
+    "Veena Devi": {
+        "constituency": "Vaishali, Bihar",
+        "party": "LJP",
+        "initiatives": [
+            "Promoted women’s education and empowerment programs",
+            "Worked on the development of rural infrastructure and healthcare",
+            "Launched initiatives for farmers’ welfare and agricultural reforms",
+            "Improved access to clean drinking water and sanitation",
+            "Focused on enhancing educational and employment opportunities for youth"
+        ],
+        "image_url": "image files/loksabha/039-Veena_Devi.jpg",
+        "key_achievements": "Empowered women and improved rural infrastructure in Vaishali"
+    },
+    "Kavita Singh": {
+        "constituency": "Siwan, Bihar",
+        "party": "JD(U)",
+        "initiatives": [
+            "Worked on improving rural healthcare and sanitation",
+            "Focused on the education and skill development of women and youth",
+            "Supported agricultural reforms and rural economic development",
+            "Launched initiatives to improve the living conditions in rural areas",
+            "Promoted women’s financial independence and entrepreneurship"
+        ],
+        "key_achievements": "Promoted rural development and women’s empowerment in Siwan"
+    },
+    "Ranjeeta Kohli": {
+        "constituency": "Bharatpur, Rajasthan",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on improving rural infrastructure and road connectivity",
+            "Launched initiatives to enhance healthcare services for women and children",
+            "Promoted educational programs for girls and women",
+            "Worked on farmers’ welfare and agricultural reforms",
+            "Supported youth empowerment through skill development programs"
+        ],
+        "key_achievements": "Empowered women and improved infrastructure in Bharatpur"
+    },
+    "Jas Kaur Meena": {
+        "constituency": "Dausa, Rajasthan",
+        "party": "BJP",
+        "initiatives": [
+            "Worked on the development of rural and tribal areas",
+            "Focused on healthcare improvements for women and children",
+            "Promoted educational programs for girls and skill development for women",
+            "Supported agricultural reforms to aid farmers",
+            "Improved water supply and sanitation facilities"
+        ],
+        "key_achievements": "Focused on rural development and women’s empowerment in Dausa"
+    },
+    "Diya Kumari": {
+        "constituency": "Rajsamand, Rajasthan",
+        "party": "BJP",
+        "initiatives": [
+            "Promoted the conservation of heritage and culture in Rajsamand",
+            "Focused on improving infrastructure and road connectivity",
+            "Advocated for women’s education and skill development programs",
+            "Worked on the development of the tourism sector in the region",
+            "Promoted agricultural reforms and welfare for farmers"
+        ],
+        "key_achievements": "Conserved heritage and promoted development in Rajsamand"
+    },
+    "Kanimozhi Karunanidhi": {
+        "constituency": "Thoothukudi, Tamil Nadu",
+        "party": "DMK",
+        "initiatives": [
+            "Promoted women's rights and gender equality",
+            "Focused on rural development and infrastructure in Thoothukudi",
+            "Worked on improving healthcare and education in rural areas",
+            "Advocated for the welfare of Tamil Nadu's fishermen community",
+            "Launched programs for the empowerment of women and youth"
+        ],
+        "key_achievements": "Empowered women and worked on rural development in Thoothukudi"
+    },
+    "Thamizhachi Thangapandian (Sumathy)": {
+        "constituency": "Chennai South, Tamil Nadu",
+        "party": "DMK",
+        "initiatives": [
+            "Worked on infrastructure development in Chennai South",
+            "Promoted women’s education and skill development",
+            "Launched initiatives to improve urban healthcare services",
+            "Focused on improving sanitation and water supply",
+            "Advocated for social welfare schemes for marginalized communities"
+        ],
+        "key_achievements": "Focused on urban development and women’s empowerment in Chennai South"
+    },
+    "Jothimani Sennimalai": {
+        "constituency": "Karur, Tamil Nadu",
+        "party": "INC",
+        "initiatives": [
+            "Promoted rural development through better infrastructure",
+            "Worked on healthcare and sanitation improvement programs",
+            "Launched skill development and women empowerment initiatives",
+            "Focused on the welfare of farmers in the region",
+            "Advocated for better educational facilities for girls"
+        ],
+        "key_achievements": "Improved rural infrastructure and women’s welfare in Karur"
+    },
+    "Sumalatha Ambareesh": {
+        "constituency": "Mandya, Karnataka",
+        "party": "Independent (BJP support)",
+        "initiatives": [
+            "Focused on the development of Mandya through better infrastructure",
+            "Promoted farmers' welfare, especially sugarcane farmers",
+            "Worked on healthcare and educational programs for rural communities",
+            "Advocated for women’s empowerment and employment opportunities",
+            "Launched clean water and sanitation initiatives"
+        ],
+        "key_achievements": "Worked on rural development and farmers' welfare in Mandya"
+    },
+
+    "Annapurna Devi": {
+        "constituency": "Kodarma, Jharkhand",
+        "party": "BJP",
+        "initiatives": [
+            "Worked on infrastructure development and rural connectivity",
+            "Focused on improving healthcare services for women and children",
+            "Promoted education, especially for girls in rural areas",
+            "Launched skill development programs for women",
+            "Advocated for better living conditions and sanitation in rural areas"
+        ],
+        "key_achievements": "Enhanced infrastructure and promoted women’s empowerment in Kodarma"
+    },
+    "Geeta Kora": {
+        "constituency": "Singhbhum, Jharkhand",
+        "party": "INC",
+        "initiatives": [
+            "Worked on the development of tribal areas and infrastructure",
+            "Focused on healthcare and educational opportunities for tribal women",
+            "Launched skill development and entrepreneurship programs for women",
+            "Promoted access to clean drinking water and sanitation",
+            "Advocated for tribal welfare and economic empowerment"
+        ],
+        "key_achievements": "Empowered tribal communities and focused on rural development in Singhbhum"
+    },
+    "Pratima Bhowmik": {
+        "constituency": "Tripura West, Tripura",
+        "party": "BJP",
+        "initiatives": [
+            "Promoted the development of Tripura’s infrastructure and road networks",
+            "Focused on healthcare and sanitation improvements",
+            "Worked on empowering women through education and skill development",
+            "Launched initiatives to improve agriculture and farmers’ welfare",
+            "Advocated for better living conditions and government services"
+        ],
+        "key_achievements": "Improved infrastructure and women's welfare in Tripura West"
+    },
+    "Agatha K Sangma": {
+        "constituency": "Tura, Meghalaya",
+        "party": "NPP",
+        "initiatives": [
+            "Focused on the development of tribal communities in Meghalaya",
+            "Promoted women’s empowerment through education and vocational training",
+            "Worked on improving healthcare and sanitation facilities in rural areas",
+            "Launched initiatives to enhance infrastructure and connectivity in Tura",
+            "Advocated for better agricultural practices and farmers' welfare"
+        ],
+        "key_achievements": "Promoted tribal development and women’s empowerment in Tura"
+    },
+    "Queen Ojha": {
+        "constituency": "Gauhati, Assam",
+        "party": "BJP",
+        "initiatives": [
+            "Worked on enhancing infrastructure and road connectivity in Gauhati",
+            "Focused on improving healthcare and sanitation facilities",
+            "Promoted skill development and employment opportunities for women",
+            "Advocated for better educational facilities for girls and youth",
+            "Launched agricultural reforms and supported farmers’ welfare"
+        ],
+        "key_achievements": "Focused on urban development and women’s welfare in Gauhati"
+    },
+    "Ramya Haridas": {
+        "constituency": "Alathur, Kerala",
+        "party": "INC",
+        "initiatives": [
+            "Focused on the development of rural areas and improving infrastructure",
+            "Promoted women’s rights and gender equality in Kerala",
+            "Worked on healthcare initiatives and improving education for girls",
+            "Launched programs to empower women through skill development",
+            "Advocated for the welfare of farmers and agricultural reforms"
+        ],
+        "key_achievements": "Led rural development and women’s empowerment initiatives in Alathur"
+    },
+    "Preneet Kaur": {
+        "constituency": "Patiala, Punjab",
+        "party": "INC",
+        "initiatives": [
+            "Focused on rural development and infrastructure improvement in Patiala",
+            "Worked on healthcare initiatives and sanitation programs",
+            "Promoted women’s empowerment through education and employment opportunities",
+            "Launched skill development programs and financial support for women",
+            "Advocated for agricultural reforms and support for farmers"
+        ],
+        "key_achievements": "Improved rural infrastructure and promoted women’s empowerment in Patiala"
+    },
+    "Maloth Kavitha": {
+        "constituency": "Mahabubabad, Telangana",
+        "party": "TRS",
+        "initiatives": [
+            "Focused on the development of rural areas in Mahabubabad",
+            "Promoted women’s empowerment through education and skill development",
+            "Worked on improving healthcare and sanitation facilities in the region",
+            "Advocated for farmers’ welfare and better agricultural practices",
+            "Launched infrastructure improvement projects to enhance connectivity"
+        ],
+        "key_achievements": "Led rural development and women’s empowerment programs in Mahabubabad"
+    },
+    "Mala Rajya Laxmi Shah": {
+        "constituency": "Tehri Garhwal, Uttarakhand",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on rural development and improving road connectivity",
+            "Promoted women’s education and skill development programs",
+            "Worked on improving healthcare infrastructure in Tehri Garhwal",
+            "Advocated for the welfare of farmers and agricultural reforms",
+            "Launched water supply and sanitation initiatives to improve living conditions"
+        ],
+        "key_achievements": "Improved rural infrastructure and empowered women in Tehri Garhwal"
+    },
+
+
+    "Sumitra Mahajan": {
+        "constituency": "Indore, Madhya Pradesh",
+        "party": "BJP",
+        "initiatives": [
+            "Promoted women’s rights and gender equality",
+            "Worked on improving the education and healthcare system in Indore",
+            "Focused on women’s welfare and development programs",
+            "Supported rural development projects and infrastructure improvement",
+            "Advocated for policies that empowered women and marginalized communities"
+        ],
+        "key_achievements": "Served as the Speaker of the Lok Sabha and championed the cause of women"
+    },
+
+    "Smriti Irani": {
+        "constituency": "Amethi, Uttar Pradesh",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on education reforms and skill development programs",
+            "Worked to empower women through the Beti Bachao Beti Padhao campaign",
+            "Launched initiatives to promote digital literacy and e-governance",
+            "Advocated for policies supporting women’s entrepreneurship",
+            "Promoted sanitation and clean water initiatives"
+        ],
+        "key_achievements": "Revitalized Amethi and focused on women’s education and empowerment"
+    },
+
+    "Meenakshi Lekhi": {
+        "constituency": "New Delhi, Delhi",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on urban development and women’s empowerment",
+            "Promoted education and healthcare for women and children",
+            "Advocated for policies to strengthen women’s participation in politics",
+            "Launched initiatives for women’s safety and legal rights",
+            "Worked on improving sanitation and public health systems"
+        ],
+        "key_achievements": "Worked on urban development, women’s rights, and legal reforms in Delhi"
+    },
+    "Darshana Vikram Jardosh": {
+        "constituency": "Surat, Gujarat",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on improving healthcare and sanitation in Surat",
+            "Promoted women’s education and vocational training programs",
+            "Worked on enhancing the welfare of women in Surat’s textile industry",
+            "Launched initiatives to improve infrastructure and urban development",
+            "Advocated for economic empowerment and financial independence for women"
+        ],
+        "key_achievements": "Promoted women’s welfare and infrastructure development in Surat"
+    },
+    "Kiran Bedi": {
+        "constituency": "Puducherry",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on law and order, women’s rights, and education reforms",
+            "Promoted women’s empowerment and gender equality",
+            "Worked on improving infrastructure and governance in Puducherry",
+            "Launched initiatives for women’s safety and child welfare",
+            "Advocated for social justice and economic reforms"
+        ],
+        "key_achievements": "A renowned police officer, known for her work on social justice and governance"
+    },
+
+    "Shobha Karandlaje": {
+        "constituency": "Udupi Chikmagalur, Karnataka",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on enhancing rural infrastructure and connectivity",
+            "Promoted women’s education and skill development",
+            "Worked on improving healthcare facilities in rural areas",
+            "Launched initiatives for farmers’ welfare and agricultural reforms",
+            "Advocated for better employment opportunities for youth"
+        ],
+        "key_achievements": "Promoted rural development and women’s empowerment in Udupi Chikmagalur"
+    },
+    "Anupriya Patel": {
+        "constituency": "Mirzapur, Uttar Pradesh",
+        "party": "Apna Dal",
+        "initiatives": [
+            "Focused on the welfare of women and backward communities in Mirzapur",
+            "Worked on improving healthcare, education, and sanitation facilities",
+            "Launched women’s skill development and empowerment programs",
+            "Advocated for better agricultural policies and economic reforms",
+            "Promoted women’s participation in politics and leadership roles"
+        ],
+        "key_achievements": "Empowered women and focused on rural development in Mirzapur"
+    },
+
+    "Vijaya Rahatkar": {
+        "constituency": "Ratnagiri-Sindhudurg, Maharashtra",
+        "party": "BJP",
+        "initiatives": [
+            "Focused on improving healthcare and education in Ratnagiri-Sindhudurg",
+            "Worked on women’s empowerment and skill development programs",
+            "Launched initiatives for rural development and infrastructure improvement",
+            "Promoted agricultural reforms and supported farmers’ welfare",
+            "Advocated for better policies to improve women’s participation in politics"
+        ],
+        "key_achievements": "Worked on rural development and women’s welfare in Ratnagiri-Sindhudurg"
+    },
+
+    "Sushma Swaraj": {
+        "constituency": "Vidisha, Madhya Pradesh",
+        "party": "BJP",
+        "initiatives": [
+            "Promoted women's empowerment and gender equality",
+            "Focused on enhancing India's foreign relations as External Affairs Minister",
+            "Advocated for better healthcare and education reforms",
+            "Worked on improving infrastructure and promoting clean energy",
+            "Launched campaigns to increase women’s participation in politics"
+        ],
+        "key_achievements": "Became a prominent face in Indian politics, enhancing India’s global stature"
+    },
+    "Meira Kumar": {
+        "constituency": "Sasaram, Bihar",
+        "party": "INC",
+        "initiatives": [
+            "Promoted rural development and improved infrastructure in Sasaram",
+            "Advocated for women’s rights and equality",
+            "Focused on education and healthcare reforms in rural areas",
+            "Worked on policies for social justice and economic upliftment of marginalized communities",
+            "Launched programs for women empowerment and skill development"
+        ],
+        "key_achievements": "First woman to hold the position of Speaker of the Lok Sabha"
+    },
+
+    "K. Kavitha": {
+        "constituency": "Nizamabad, Telangana",
+        "party": "TRS",
+        "initiatives": [
+            "Focused on the development of rural areas in Nizamabad",
+            "Promoted women’s empowerment through education and skill development",
+            "Worked on improving healthcare and sanitation facilities in the region",
+            "Advocated for farmers’ welfare and better agricultural practices",
+            "Launched infrastructure improvement projects to enhance connectivity"
+        ],
+        "key_achievements": "Led rural development and women’s empowerment programs in Nizamabad"
+    },
+    "Savitri Bai Phule": {
+        "constituency": "Bahraich, Uttar Pradesh",
+        "party": "BSP",
+        "initiatives": [
+            "Focused on the welfare of women, particularly from marginalized communities",
+            "Worked on improving education and healthcare systems in rural areas",
+            "Launched initiatives to promote women’s economic empowerment",
+            "Advocated for social justice and better living conditions for women",
+            "Promoted women’s participation in politics and public life"
+        ],
+        "key_achievements": "Focused on women’s empowerment and social justice for marginalized communities"
+    },
+    "Sonia Gandhi": {
+        "constituency": "Rae Bareli, Uttar Pradesh",
+        "party": "Indian National Congress (INC)",
+        "initiatives": [
+            "Focused on the welfare of women, especially in rural areas",
+            "Worked on improving healthcare, education, and sanitation in Rae Bareli",
+            "Advocated for rural development and economic empowerment",
+            "Launched initiatives to improve women’s access to education and healthcare",
+            "Promoted social justice and worked towards uplifting marginalized communities"
+        ],
+        "key_achievements": "Has been a key figure in Indian politics, leading the UPA government for many years"
+    },
+
+    "Kumari Selja": {
+        "constituency": "Ambala, Haryana",
+        "party": "Indian National Congress (INC)",
+        "initiatives": [
+            "Focused on the welfare of backward communities, especially women",
+            "Worked on improving healthcare and sanitation in Ambala",
+            "Launched skill development programs for women and youth",
+            "Advocated for policies supporting agricultural reforms and farmers’ welfare",
+            "Promoted women’s leadership and empowerment in local governance"
+        ],
+        "key_achievements": "Improved women’s empowerment and rural development in Ambala"
+    },
+    "Droupadi Murmu": {
+        "constituency": "Mayurbhanj, Odisha",
+        "party": "Bharatiya Janata Party (BJP)",
+        "initiatives": [
+            "Focused on the welfare of tribal women and communities",
+            "Worked on improving the education and healthcare systems in Mayurbhanj",
+            "Advocated for the upliftment of marginalized communities",
+            "Launched women’s empowerment programs and skill development initiatives",
+            "Promoted better policies for tribal land rights and livelihood"
+        ],
+        "key_achievements": "Empowered tribal women and supported their rights and welfare"
+    },
+    "Nirmala Sitharaman": {
+        "constituency": "Karnataka",
+        "party": "Bharatiya Janata Party (BJP)",
+        "initiatives": [
+            "Advocated for economic reforms and ease of doing business",
+            "Promoted women’s empowerment through financial inclusion programs",
+            "Focused on defense and security issues as the Defense Minister",
+            "Introduced GST to simplify tax structure",
+            "Launched initiatives for the modernization of India’s military forces"
+        ],
+        "key_achievements": "First woman to hold the position of India's Defense Minister"
+    },
+    "Shobhana Kamineni": {
+        "constituency": "Telangana",
+        "party": "Indian National Congress (INC)",
+        "initiatives": [
+            "Focused on the development of rural areas and women's welfare",
+            "Promoted skill development and vocational training for women",
+            "Worked on improving healthcare and sanitation infrastructure",
+            "Advocated for women's rights and gender equality",
+            "Launched initiatives for improving rural infrastructure and agriculture"
+        ],
+        "key_achievements": "A leader in promoting women’s empowerment and rural development"
+    },
+    "Poonam Mahajan": {
+        "constituency": "Mumbai North-Central, Maharashtra",
+        "party": "Bharatiya Janata Party (BJP)",
+        "initiatives": [
+            "Focused on urban development and improving Mumbai's infrastructure",
+            "Promoted women’s education and empowerment programs",
+            "Worked on improving sanitation and healthcare facilities in Mumbai",
+            "Launched initiatives to support small businesses and entrepreneurs",
+            "Advocated for better policies for women’s safety and well-being"
+        ],
+        "key_achievements": "Worked towards infrastructure development and women's welfare in Mumbai"
+    }
+}
+
+
+
+
+
