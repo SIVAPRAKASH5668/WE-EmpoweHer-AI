@@ -132,7 +132,7 @@ We welcome contributions! Please feel free to submit a Pull Request. For major c
 ## 🙏 Acknowledgments
 
 - Special thanks to all contributors
-- Also for my Team Crews
+- Also for my Team Members
 
 ---
 ⭐️ Star this project if you find it helpful!
