@@ -4,7 +4,7 @@
 
 A comprehensive web platform dedicated to empowering women's participation in democracy and governance through AI-driven tools and resources.
 
-![WE-EmpowerHer AI Banner](path/to/your/banner-image.png)
+![WE-EmpowerHer AI Banner](Images/Screenshot (1).png)
 
 ## 🎯 Features
 
