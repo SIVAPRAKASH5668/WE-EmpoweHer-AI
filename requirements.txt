@@ -1,0 +1,16 @@
+Flask==2.2.3
+Flask-Cors==3.1.1
+requests==2.28.2
+numpy==1.23.5
+pandas==1.5.3
+matplotlib==3.7.1
+tensorflow==2.11.0
+scikit-learn==1.2.1
+Pillow==9.3.0
+python-dotenv==0.21.0
+groq== 0.11.0  
+fpdf==1.7.2  
+base64==1.0.0  
+io==0.1.0  
+uuid==1.30  
+functools==3.10.0  
