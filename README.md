@@ -27,8 +27,6 @@ A comprehensive web platform dedicated to empowering women's participation in de
 - **Frontend**: HTML5, TailwindCSS, JavaScript
 - **Backend**: Python, Flask
 - **AI/ML**: Various AI models for different features
-- **Database**: [Your Database Technology]
-- **Authentication**: [Your Auth System]
 
 ## 🚀 Getting Started
 
