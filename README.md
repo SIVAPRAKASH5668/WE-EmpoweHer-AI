@@ -79,6 +79,7 @@ WE/
 │   └── config.py       # Configuration
 ├── .env                # Environment variables
 └── run.py             # Application entry point
+|__ requirements.txt 
 ```
 
 ## 🌟 Core Features
