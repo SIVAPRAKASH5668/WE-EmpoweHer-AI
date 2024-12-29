@@ -35,6 +35,7 @@ A comprehensive web platform dedicated to empowering women's participation in de
 - Python 3.8+
 - pip
 - Virtual environment (recommended)
+- groq api
 
 ### Installation
 
